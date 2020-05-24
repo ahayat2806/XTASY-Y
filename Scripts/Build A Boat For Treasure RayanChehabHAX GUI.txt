@@ -1,0 +1,193 @@
+--This was made by I low/RayanChehabHAX, if you fucking edit the texts and go say Hey guys i made a gui! Then go fuck off lol.
+
+--Local
+
+
+
+local MENU = Instance.new("ScreenGui")
+
+local GUI = Instance.new("Frame")
+
+local title = Instance.new("TextLabel")
+
+local tb = Instance.new("TextButton")
+
+local tr = Instance.new("TextButton")
+
+local truss = Instance.new("TextButton")
+
+local wedge = Instance.new("TextButton")
+
+
+
+--Basics
+
+
+
+MENU.Name = "BABFT"
+
+MENU.Parent = game.Players.LocalPlayer.PlayerGui
+
+
+
+GUI.Name = "GUI"
+
+GUI.Parent = MENU
+
+GUI.Active = true
+
+GUI.Draggable = true
+
+GUI.Position = UDim2.new(0.009, 326, 0.412, -32)
+
+GUI.Size = UDim2.new(0, 142, 0, 279)
+
+GUI.Style = Enum.FrameStyle.RobloxRound
+
+
+
+title.Name = "Title"
+
+title.Parent = GUI
+
+title.Position = UDim2.new(0.021, 5, -0.007, 0)
+
+title.Size = UDim2.new(0, 106, 0, 61)
+
+title.BackgroundTransparency = 1
+
+title.Text = "BABFT GUI by I low"
+
+title.TextSize = 18
+
+title.TextScaled = true
+
+title.FontSize = Enum.FontSize.Size18
+
+title.TextSize = 18
+
+title.Font = Enum.Font.Cartoon
+
+title.TextColor3 = Color3.new(255, 0, 0)
+
+
+
+--Buttons
+
+
+
+tb.Name = "TitaniumBlock"
+
+tb.Parent = GUI
+
+tb.Text = "Titanium Block"
+
+tb.Position = UDim2.new(0.12, -15, 0.412, -45)
+
+tb.Size = UDim2.new(0, 125, 0, 40)
+
+tb.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+
+tb.FontSize = Enum.FontSize.Size18
+
+tb.TextSize = 13
+
+
+
+tr.Name = "TitaniumRod"
+
+tr.Parent = GUI
+
+tr.Text = "Titanium Rod"
+
+tr.Position = UDim2.new(0.12, -15, 0.412, 5)
+
+tr.Size = UDim2.new(0, 125, 0, 40)
+
+tr.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+
+tr.FontSize = Enum.FontSize.Size18
+
+tr.TextSize = 13
+
+
+
+truss.Name = "Truss"
+
+truss.Parent = GUI
+
+truss.Text = "Truss"
+
+truss.Position = UDim2.new(0.12, -15, 0.412, 55)
+
+truss.Size = UDim2.new(0, 125, 0, 40)
+
+truss.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+
+truss.FontSize = Enum.FontSize.Size18
+
+truss.TextSize = 13
+
+
+
+wedge.Name = "Wedge"
+
+wedge.Parent = GUI
+
+wedge.Text = "Wedge"
+
+wedge.Position = UDim2.new(0.12, -15, 0.412, 105)
+
+wedge.Size = UDim2.new(0, 125, 0, 40)
+
+wedge.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+
+wedge.FontSize = Enum.FontSize.Size18
+
+wedge.TextSize = 13
+
+
+
+--Functions
+
+
+
+tb.MouseButton1Click:connect(function()
+
+game.Players.LocalPlayer.Data.TitaniumBlock.Value = 2e9
+
+end)
+
+
+
+tr.MouseButton1Click:connect(function()
+
+game.Players.LocalPlayer.Data.TitaniumRod.Value = 2e9
+
+end)
+
+
+
+truss.MouseButton1Click:connect(function()
+
+game.Players.LocalPlayer.Data.Truss.Value = 2e9
+
+end)
+
+
+
+wedge.MouseButton1Click:connect(function()
+
+game.Players.LocalPlayer.Data.Wedge.Value = 2e9
+
+end)
+
+
+
+
+
+--Printing
+
+
+
+print("Welcome! This gui was made by I low!")

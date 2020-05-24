@@ -1,0 +1,206 @@
+--[[ Silent Hub
+Update : V1.1
++ New Ui
++ Instant Kill Dungeon Quest
++ Gui : Mon#8974 | Scripter : Hidden
+Post by : Mon
+--]]
+local NewUpdateGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Credit = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local Hip = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local SpeedText = Instance.new("TextBox")
+local HipText = Instance.new("TextBox")
+local NoclipOff = Instance.new("TextButton")
+local InstantDungeonQuest = Instance.new("TextButton")
+local Name = Instance.new("TextLabel")
+local NoclipOn = Instance.new("TextButton")
+--Properties:
+NewUpdateGui.Name = "NewUpdateGui"
+NewUpdateGui.Parent = game.CoreGui
+NewUpdateGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = NewUpdateGui
+Main.Active = true
+Main.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Main.BorderColor3 = Color3.new(1, 1, 1)
+Main.Position = UDim2.new(0.0970126688, 0, 0.196883857, 0)
+Main.Size = UDim2.new(0, 304, 0, 237)
+
+Credit.Name = "PlayerName"
+Credit.Parent = Main
+Credit.BackgroundColor3 = Color3.new(1, 1, 1)
+Credit.BackgroundTransparency = 1
+Credit.Position = UDim2.new(0.00281695323, 0, 0.891795218, 0)
+Credit.Size = UDim2.new(0, 303, 0, 25)
+Credit.Font = Enum.Font.Cartoon
+Credit.Text = "  Gui : Mon#8974 | Scripter : Hidden"
+Credit.TextColor3 = Color3.new(1, 1, 1)
+Credit.TextSize = 18
+Credit.TextXAlignment = Enum.TextXAlignment.Left
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.new(1, 1, 1)
+Close.BackgroundTransparency = 1
+Close.Position = UDim2.new(0.912721574, 0, 0, 0)
+Close.Size = UDim2.new(0, 26, 0, 21)
+Close.Font = Enum.Font.SciFi
+Close.Text = "X"
+Close.TextColor3 = Color3.new(1, 1, 1)
+Close.TextSize = 18
+Close.MouseButton1Down:connect(function()
+Main.Visible = false
+end)
+
+Hip.Name = "Hip"
+Hip.Parent = Main
+Hip.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Hip.BorderColor3 = Color3.new(1, 1, 1)
+Hip.Position = UDim2.new(0.622535229, 0, 0.146896839, 0)
+Hip.Size = UDim2.new(0, 90, 0, 34)
+Hip.Font = Enum.Font.Cartoon
+Hip.Text = "HipHeight"
+Hip.TextColor3 = Color3.new(1, 1, 1)
+Hip.TextSize = 18
+Hip.MouseButton1Click:Connect(function()
+local Player = game.Players.LocalPlayer.Character
+Player.Humanoid.HipHeight = HipText.Text
+end)
+
+Speed.Name = "Speed"
+Speed.Parent = Main
+Speed.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+Speed.BorderColor3 = Color3.new(1, 1, 1)
+Speed.Position = UDim2.new(0.111276917, 0, 0.146896809, 0)
+Speed.Size = UDim2.new(0, 90, 0, 34)
+Speed.Font = Enum.Font.Cartoon
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.new(1, 1, 1)
+Speed.TextSize = 18
+Speed.MouseButton1Click:Connect(function()
+local Player = game.Players.LocalPlayer.Character
+Player.Humanoid.WalkSpeed = SpeedText.Text
+end)
+
+SpeedText.Name = "SpeedText"
+SpeedText.Parent = Main
+SpeedText.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+SpeedText.BorderColor3 = Color3.new(1, 1, 1)
+SpeedText.Position = UDim2.new(0.152131215, 0, 0.367272735, 0)
+SpeedText.Size = UDim2.new(0, 67, 0, 27)
+SpeedText.Font = Enum.Font.Cartoon
+SpeedText.PlaceholderColor3 = Color3.new(0.74902, 0.74902, 0.74902)
+SpeedText.PlaceholderText = "16"
+SpeedText.Text = ""
+SpeedText.TextColor3 = Color3.new(1, 1, 1)
+SpeedText.TextSize = 18
+
+HipText.Name = "HipText"
+HipText.Parent = Main
+HipText.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+HipText.BorderColor3 = Color3.new(1, 1, 1)
+HipText.Position = UDim2.new(0.663389444, 0, 0.367272735, 0)
+HipText.Size = UDim2.new(0, 67, 0, 27)
+HipText.Font = Enum.Font.Cartoon
+HipText.PlaceholderColor3 = Color3.new(0.74902, 0.74902, 0.74902)
+HipText.PlaceholderText = "2"
+HipText.Text = ""
+HipText.TextColor3 = Color3.new(1, 1, 1)
+HipText.TextSize = 18
+
+NoclipOn.Name = "NoclipOn"
+NoclipOn.Parent = Main
+NoclipOn.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+NoclipOn.BorderColor3 = Color3.new(0.333333, 1, 0)
+NoclipOn.Position = UDim2.new(0.37417534, 0, 0.530326068, 0)
+NoclipOn.Size = UDim2.new(0, 88, 0, 34)
+NoclipOn.Font = Enum.Font.Cartoon
+NoclipOn.Text = "Noclip"
+NoclipOn.TextColor3 = Color3.new(1, 1, 1)
+NoclipOn.TextSize = 18
+NoclipOn.MouseButton1Down:connect(function()
+NoclipOn.Visible = false
+NoclipOff.Visible = true
+--Script Here (OFF)
+noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+end)
+
+InstantDungeonQuest.Name = "Instant [ Dungeon Quest ]"
+InstantDungeonQuest.Parent = Main
+InstantDungeonQuest.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+InstantDungeonQuest.BorderColor3 = Color3.new(1, 1, 1)
+InstantDungeonQuest.Position = UDim2.new(0.15631023, 0, 0.716363668, 0)
+InstantDungeonQuest.Size = UDim2.new(0, 221, 0, 34)
+InstantDungeonQuest.Font = Enum.Font.Cartoon
+InstantDungeonQuest.Text = "Instant [ Dungeon Quest ]"
+InstantDungeonQuest.TextColor3 = Color3.new(1, 1, 1)
+InstantDungeonQuest.TextSize = 18
+InstantDungeonQuest.MouseButton1Down:connect(function()
+local Player = game.Players.LocalPlayer
+while wait(0.2) do
+for index, value in next, workspace:GetDescendants() do
+if (value:FindFirstChildOfClass("Humanoid") and value ~= Player.Character) then
+value.Humanoid.Health = 0
+end
+end
+end
+end)
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.BackgroundColor3 = Color3.new(1, 1, 1)
+Name.BackgroundTransparency = 1
+Name.Position = UDim2.new(0.00328947417, 0, 0, 0)
+Name.Size = UDim2.new(0, 303, 0, 21)
+Name.Font = Enum.Font.Cartoon
+Name.Text = "Silent Hub Beta V1.1"
+Name.TextColor3 = Color3.new(1, 1, 1)
+Name.TextSize = 18
+Name.TextWrapped = true
+
+NoclipOff.Name = "NoclipOff"
+NoclipOff.Parent = Main
+NoclipOff.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+NoclipOff.BorderColor3 = Color3.new(1, 1, 1)
+NoclipOff.Position = UDim2.new(0.37417534, 0, 0.530326068, 0)
+NoclipOff.Size = UDim2.new(0, 88, 0, 34)
+NoclipOff.Font = Enum.Font.Cartoon
+NoclipOff.Text = "Noclip"
+NoclipOff.TextColor3 = Color3.new(1, 1, 1)
+NoclipOff.TextSize = 18
+NoclipOff.MouseButton1Down:connect(function()
+NoclipOff.Visible = false
+NoclipOn.Visible = true
+--Script Here (OFF)
+noclip = true
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+end)
+-- Scripts:
+NoclipOff.MouseButton1Down:connect(function()
+if ok then
+NoclipOn.Text = "Noclip"
+NoclipOn.BorderColor3 = Color3.fromRGB(85, 255, 0)
+else
+NoclipOff.Text = "Noclip"
+NoclipOff.BorderColor3 = Color3.fromRGB(255, 255, 255)
+end
+ok = not ok
+end)
+
+--[[ Settings --]]
+Main.Draggable = true

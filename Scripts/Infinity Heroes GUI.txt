@@ -1,0 +1,617 @@
+-- Farewell Infortality.
+
+
+
+
+
+
+
+-- Version: 2.82
+
+
+
+-- Instances:
+
+
+
+local InfinityGUI = Instance.new("ScreenGui")
+
+
+
+local Open = Instance.new("ImageButton")
+
+
+
+local GUI = Instance.new("Frame")
+
+
+
+local Title = Instance.new("TextBox")
+
+
+
+local TitleImage = Instance.new("ImageLabel")
+
+
+
+local ChargeKi = Instance.new("TextButton")
+
+
+
+local Attack = Instance.new("TextButton")
+
+
+
+local Defense = Instance.new("TextButton")
+
+
+
+local Ki = Instance.new("TextButton")
+
+
+
+local Dragon = Instance.new("ImageLabel")
+
+
+
+--Properties:
+
+
+
+InfinityGUI.Name = "Infinity GUI"
+
+
+
+InfinityGUI.Parent = game.CoreGui
+
+
+
+InfinityGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+
+
+
+
+
+GUI.Name = "GUI"
+
+
+
+GUI.Parent = InfinityGUI
+
+
+
+GUI.BackgroundColor3 = Color3.new(1, 0.886275, 0.00784314)
+
+
+
+GUI.BorderSizePixel = 5
+
+
+
+GUI.Position = UDim2.new(0.363972872, 0, 0.43857494, 0)
+
+
+
+GUI.Size = UDim2.new(0, 441, 0, 100)
+
+
+
+GUI.Visible = true
+
+
+
+GUI.Active = true
+
+
+
+GUI.Draggable = true
+
+
+
+
+
+
+
+Title.Name = "Title"
+
+
+
+Title.Parent = GUI
+
+
+
+Title.BackgroundColor3 = Color3.new(1, 1, 1)
+
+
+
+Title.BackgroundTransparency = 1
+
+
+
+Title.BorderSizePixel = 0
+
+
+
+Title.Position = UDim2.new(0.276643991, 0, -0.579999983, 0)
+
+
+
+Title.Size = UDim2.new(0, 128, 0, 50)
+
+
+
+Title.Font = Enum.Font.GothamBlack
+
+
+
+Title.Text = "INFINITY HEROES"
+
+
+
+Title.TextColor3 = Color3.new(0, 0, 0)
+
+
+
+Title.TextSize = 20
+
+
+
+
+
+
+
+TitleImage.Name = "Title Image"
+
+
+
+TitleImage.Parent = GUI
+
+
+
+TitleImage.BackgroundColor3 = Color3.new(1, 1, 1)
+
+
+
+TitleImage.BackgroundTransparency = 1
+
+
+
+TitleImage.Position = UDim2.new(0.607709765, 0, -0.830000043, 0)
+
+
+
+TitleImage.Size = UDim2.new(0, 75, 0, 74)
+
+
+
+TitleImage.Image = "rbxassetid://2185184748"
+
+
+
+
+
+
+
+ChargeKi.Name = "ChargeKi"
+
+
+
+ChargeKi.Parent = GUI
+
+
+
+ChargeKi.BackgroundColor3 = Color3.new(1, 0.835294, 0.00392157)
+
+
+
+ChargeKi.BorderSizePixel = 2
+
+
+
+ChargeKi.Position = UDim2.new(0.752834439, 0, 0.25, 0)
+
+
+
+ChargeKi.Size = UDim2.new(0, 100, 0, 50)
+
+
+
+ChargeKi.Font = Enum.Font.SourceSans
+
+
+
+ChargeKi.Text = "Charge Ki"
+
+
+
+ChargeKi.TextColor3 = Color3.new(0, 0, 0)
+
+
+
+ChargeKi.TextSize = 14
+
+
+
+ChargeKi.MouseButton1Down:connect(function()
+
+
+
+for i = 100000,0,-1 do
+
+
+
+local A_1 = game:GetService("Players").PUTYOURNICKHERE.Status
+
+
+
+local A_2 = game:GetService("Workspace").PUTYOURNICKHERE.UpperTorso
+
+
+
+local A_3 = game:GetService("Workspace").PUTYOURNICKHERE.Humanoid
+
+
+
+local Event = game:GetService("ReplicatedStorage").Remotes.Training.Charge
+
+
+
+Event:InvokeServer(A_1, A_2, A_3)
+
+
+
+end
+
+
+
+end)
+
+
+
+
+
+
+
+Attack.Name = "Attack"
+
+
+
+Attack.Parent = GUI
+
+
+
+Attack.BackgroundColor3 = Color3.new(1, 0.835294, 0.00392157)
+
+
+
+Attack.BorderSizePixel = 2
+
+
+
+Attack.Position = UDim2.new(0.512471676, 0, 0.25, 0)
+
+
+
+Attack.Size = UDim2.new(0, 100, 0, 50)
+
+
+
+Attack.Font = Enum.Font.SourceSans
+
+
+
+Attack.Text = "Attack"
+
+
+
+Attack.TextColor3 = Color3.new(0, 0, 0)
+
+
+
+Attack.TextSize = 14
+
+
+
+Attack.MouseButton1Down:connect(function()
+
+
+
+for i = 100000,0,-1 do
+
+
+
+local A_1 = game:GetService("Players").PUTYOURNICKHERE.Stats
+
+
+
+local A_2 =
+
+
+
+{
+
+
+
+["LeftLowerArm"] = game:GetService("Workspace").PUTYOURNICKHERE.LeftLowerArm,
+
+
+
+["RightUpperArm"] = game:GetService("Workspace").PUTYOURNICKHERE.RightUpperArm,
+
+
+
+["LeftFoot"] = game:GetService("Workspace").PUTYOURNICKHERE.LeftFoot,
+
+
+
+["RightHand"] = game:GetService("Workspace").PUTYOURNICKHERE.RightHand,
+
+
+
+["RightLowerArm"] = game:GetService("Workspace").PUTYOURNICKHERE.RightLowerArm,
+
+
+
+["LeftUpperLeg"] = game:GetService("Workspace").PUTYOURNICKHERE.LeftUpperLeg,
+
+
+
+["LeftUpperArm"] = game:GetService("Workspace").PUTYOURNICKHERE.LeftUpperArm,
+
+
+
+["Character"] = game:GetService("Workspace").PUTYOURNICKHERE,
+
+
+
+["LeftHand"] = game:GetService("Workspace").PUTYOURNICKHERE.LeftHand,
+
+
+
+["RightFoot"] = game:GetService("Workspace").PUTYOURNICKHERE.RightFoot,
+
+
+
+["Humanoid"] = game:GetService("Workspace").PUTYOURNICKHERE.Humanoid,
+
+
+
+["RightLowerLeg"] = game:GetService("Workspace").PUTYOURNICKHERE.RightLowerLeg,
+
+
+
+["RightUpperLeg"] = game:GetService("Workspace").PUTYOURNICKHERE.RightUpperLeg,
+
+
+
+["LeftLowerLeg"] = game:GetService("Workspace").PUTYOURNICKHERE.LeftLowerLeg
+
+
+
+}
+
+
+
+local Event = game:GetService("ReplicatedStorage").Remotes.Training.Combat
+
+
+
+Event:InvokeServer(A_1, A_2)
+
+
+
+end
+
+
+
+end)
+
+
+
+
+
+
+
+Defense.Name = "Defense"
+
+
+
+Defense.Parent = GUI
+
+
+
+Defense.BackgroundColor3 = Color3.new(1, 0.835294, 0.00392157)
+
+
+
+Defense.BorderSizePixel = 2
+
+
+
+Defense.Position = UDim2.new(0.272108853, 0, 0.25, 0)
+
+
+
+Defense.Size = UDim2.new(0, 100, 0, 50)
+
+
+
+Defense.Font = Enum.Font.SourceSans
+
+
+
+Defense.Text = "Defense"
+
+
+
+Defense.TextColor3 = Color3.new(0, 0, 0)
+
+
+
+Defense.TextSize = 14
+
+
+
+Defense.MouseButton1Down:connect(function()
+
+
+
+for i = 100000,0,-1 do
+
+
+
+local A_1 = game:GetService("Players").PUTYOURNICKHERE.Stats
+
+
+
+local A_2 = game:GetService("Players").PUTYOURNICKHERE.Status
+
+
+
+local A_3 = game:GetService("Workspace").PUTYOURNICKHERE.Humanoid
+
+
+
+local A_4 = game:GetService("Workspace").PUTYOURNICKHERE.RightHand
+
+
+
+local Event = game:GetService("ReplicatedStorage").Remotes.Training.Defense
+
+
+
+Event:InvokeServer(A_1, A_2, A_3, A_4)
+
+
+
+end
+
+
+
+end)
+
+
+
+
+
+
+
+Ki.Name = "Ki"
+
+
+
+Ki.Parent = GUI
+
+
+
+Ki.BackgroundColor3 = Color3.new(1, 0.835294, 0.00392157)
+
+
+
+Ki.BorderSizePixel = 2
+
+
+
+Ki.Position = UDim2.new(0.0317460336, 0, 0.25, 0)
+
+
+
+Ki.Size = UDim2.new(0, 100, 0, 50)
+
+
+
+Ki.Font = Enum.Font.SourceSans
+
+
+
+Ki.Text = "Ki"
+
+
+
+Ki.TextColor3 = Color3.new(0, 0, 0)
+
+
+
+Ki.TextSize = 14
+
+
+
+Ki.MouseButton1Down:connect(function()
+
+
+
+for i = 100000,0,-1 do
+
+
+
+local A_1 = game:GetService("Players").PUTYOURNICKHERE.Status
+
+
+
+local A_2 = game:GetService("Players").PUTYOURNICKHERE.Stats
+
+
+
+local A_3 = game:GetService("Workspace").PUTYOURNICKHERE.HumanoidRootPart
+
+
+
+local A_4 = game:GetService("Workspace").PUTYOURNICKHERE.RightHand
+
+
+
+local A_5 = game:GetService("Workspace").PUTYOURNICKHERE
+
+
+
+local Event = game:GetService("ReplicatedStorage").Remotes.Training.Blast
+
+
+
+Event:InvokeServer(A_1, A_2, A_3, A_4, A_5)
+
+
+
+end
+
+
+
+end)
+
+
+
+
+
+
+
+
+
+
+
+Dragon.Name = "Dragon"
+
+
+
+Dragon.Parent = GUI
+
+
+
+Dragon.BackgroundColor3 = Color3.new(1, 1, 1)
+
+
+
+Dragon.BackgroundTransparency = 1
+
+
+
+Dragon.Position = UDim2.new(-0.111111104, 0, -0.579999983, 0)
+
+
+
+Dragon.Size = UDim2.new(0, 100, 0, 100)
+
+
+
+Dragon.Image = "rbxassetid://157907170"

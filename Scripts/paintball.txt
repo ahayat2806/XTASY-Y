@@ -1,0 +1,12 @@
+while wait(0.5) do
+local stuff = workspace:getDescendants()
+for i=1,#stuff do
+if stuff[i].Name == "Hitbox" then
+if stuff[i].Parent.Name ~= game.Players.LocalPlayer.Name then
+stuff[i].Massless = true
+stuff[i].Size = Vector3.new(100,100,100)
+stuff[i].Transparency = 0.5
+end
+end
+end
+end

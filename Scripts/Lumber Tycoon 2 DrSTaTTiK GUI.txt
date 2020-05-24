@@ -1,0 +1,1415 @@
+--[[
+
+	ORIGINAL POST: https://v3rmillion.net/showthread.php?tid=424123&page=1
+
+	UI and 90% of scripting scripted from scratch by DrSTaTTiK
+
+	I know I didn't ask for sigmas GreyWood script but credit to him
+
+	the user by the name of joseph2235(Your're welcome) provided the
+
+	script made by sigma.
+
+	Please give to ye boy DrSTaTTiK credit for his work.
+
+	
+
+	THANKS!!
+
+--]]
+
+
+
+local service = setmetatable({}, {
+
+	__index = function(t, k)
+
+		return game:GetService(k)
+
+	end
+
+})
+
+
+
+if service.Players.LocalPlayer.PlayerGui:FindFirstChild("DrSTaTTiK") then
+
+	service.Players.LocalPlayer.PlayerGui:FindFirstChild("DrSTaTTiK"):Destroy()
+
+end
+
+
+
+function Create(cls,props)
+
+	local inst = Instance.new(cls)
+
+	for i,v in pairs(props) do
+
+		inst[i] = v
+
+	end
+
+	return inst
+
+end
+
+
+
+local HitPoints={
+
+	['GoldAxe']= 50;
+
+	['BasicHatchet']= 0.2;
+
+	['Axe1']= 0.55;
+
+	['Axe2']= 0.93;
+
+	['AxeAlphaTesters']= 1.5;
+
+	['Rukiryaxe']= 1.68;
+
+	['Axe3']= 1.45;
+
+	['AxeBetaTesters']= 1.45;
+
+	['FireAxe']= 0.6;
+
+	['SilverAxe']= 1.6;
+
+	['EndTimesAxe']= 10000000;
+
+	['AxeChicken']= 0.1;
+
+	['CandyCaneAxe']= 0;
+
+}
+
+
+
+local WayPointss = {
+
+	["Spawn"] 				= CFrame.new(155, 3, 74),
+
+	["Wood R Us"] 			= CFrame.new(265, 3, 57),
+
+	["Land Store"] 			= CFrame.new(258, 3, -99),
+
+	["Dock"] 				= CFrame.new(1114, -1, -197),
+
+	["Link's Logic"] 		= CFrame.new(4605, 3, -727),
+
+	["Cave"] 				= CFrame.new(3581, -179, 430),
+
+	["Volcano"] 			= CFrame.new(-1585, 622, 1140),
+
+	["Swamp"] 				= CFrame.new(-1209, 132, -801),
+
+	["Palm Island"] 		= CFrame.new(2549, -5, -42),
+
+	["Fancy Furnishings"] 	= CFrame.new(491, 3, -1720),
+
+	["Boxed Cars"] 			= CFrame.new(509, 3, -1463),
+
+	["Fine Arts Shop"] 		= CFrame.new(5207, -166, 719),
+
+	["Bob's Shack"] 		= CFrame.new(260, 8, -2542),
+
+	["Bridge"] 				= CFrame.new(113, 11, -977),
+
+	["End Times"] 			= CFrame.new(113, -214, -951),
+
+	["Shrine of Sight"] 	= CFrame.new(-1600, 195, 919),
+
+	["The Den"] 			= CFrame.new(323, 41, 1930),
+
+	["Volcano Win"]			= CFrame.new(-1675, 348, 1476),
+
+	["Ski Lodge"]			= CFrame.new(1244, 62, 2306),
+
+	["Strange Man"]			= CFrame.new(1061, 16, 1131)
+
+}
+
+
+
+function GetAxe()
+
+	if service.Players.LocalPlayer.Character:FindFirstChild("Tool") then
+
+		return service.Players.LocalPlayer.Character:FindFirstChild("Tool")
+
+	end
+
+end
+
+
+
+local Walk=16
+
+local Jump=100
+
+
+
+function god()
+
+	game.Players.LocalPlayer.Character.Humanoid.Name = "1"
+
+	local l = game.Players.LocalPlayer.Character["1"]:Clone()
+
+	l.Parent = game.Players.LocalPlayer.Character
+
+	l.Name = "Humanoid"
+
+	wait(0.1)
+
+	game.Players.LocalPlayer.Character["1"]:Destroy()
+
+	game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+
+	game.Players.LocalPlayer.Character.Animate.Disabled = true
+
+	l.Changed:Connect(function()
+
+		if l then
+
+			l.WalkSpeed=Walk
+
+			l.JumpPower=Jump
+
+		end
+
+	end)
+
+end
+
+
+
+function SetTransOfShadow(Trans,UI)
+
+	for i,v in pairs(UI:GetChildren()) do
+
+		if v.Name=="Shadow" then
+
+			v.Transparency=Trans
+
+		end
+
+	end
+
+end
+
+
+
+function MakeShadow(UI,Index)
+
+	Create("Frame",{Parent=UI,Size=UDim2.new(1,0,1,0),ZIndex=Index,Position=UDim2.new(0,1,0,1),BackgroundColor3=Color3.fromRGB(0,0,0),BorderSizePixel=0,Transparency=0.9,Name="Shadow"})
+
+	Create("Frame",{Parent=UI,Size=UDim2.new(1,0,1,0),ZIndex=Index,Position=UDim2.new(0,2,0,2),BackgroundColor3=Color3.fromRGB(0,0,0),BorderSizePixel=0,Transparency=0.9,Name="Shadow"})
+
+	Create("Frame",{Parent=UI,Size=UDim2.new(1,0,1,0),ZIndex=Index,Position=UDim2.new(0,3,0,3),BackgroundColor3=Color3.fromRGB(0,0,0),BorderSizePixel=0,Transparency=0.9,Name="Shadow"})
+
+end
+
+
+
+local Glitching=false
+
+local Main = Create("ScreenGui",{Parent=service.Players.LocalPlayer.PlayerGui,Name="DrSTaTTiK"})
+
+local Open = Create("TextButton",{Parent=Main,Size=UDim2.new(0,40,0,20),ZIndex=2,Position=UDim2.new(.5,-20,.9,-10),Text="Open",BackgroundColor3=Color3.fromRGB(218, 114, 45),BorderSizePixel=0})
+
+local Hub = Create("Frame",{Parent=Main,Size=UDim2.new(0,400,0,300),Position=UDim2.new(.3,0,.5,0),Draggable=true,Visible=false,Transparency=1,ZIndex=100,Active=true})
+
+local TopBar = Create("Frame",{Parent=Hub,Size=UDim2.new(1,0,.1,0),BackgroundColor3=Color3.fromRGB(218, 114, 45),BorderSizePixel=0,ZIndex=4})
+
+local Exit = Create("TextButton",{Parent=TopBar,ZIndex=4,Size=UDim2.new(.075,0,1,0),Position=UDim2.new(.925,0,0,0),TextScaled=false,TextSize=14,BackgroundTransparency=1,Text="X"})
+
+local Name = Create("TextLabel",{Parent=TopBar,ZIndex=4,Size=UDim2.new(.5,0,1,0),Position=UDim2.new(0,10,0,0),TextStrokeTransparency=0.9,Text="Produced by DrSTaTTiK",TextColor3=Color3.fromRGB(230,230,230),BackgroundTransparency=1,TextXAlignment="Left",BorderSizePixel=0})
+
+local Menu = Create("ImageLabel",{Parent=Hub,Size=UDim2.new(1,0,.9,0),ZIndex=2,ImageColor3=Color3.fromRGB(100,100,100),ScaleType="Tile",TileSize=UDim2.new(0,100,0,100),Image="rbxassetid://585867512",Position=UDim2.new(0,0,.1,0),BorderSizePixel=0})
+
+local TPWood = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(0,10,0,10),Text="TPWood",BorderSizePixel=0})
+
+local TPWoodToSell = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(.75,-10,0,10),Text="Sell Wood",BorderSizePixel=0})
+
+local GodMode = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(.75,-10,0.1,20),Text="GodMode",BorderSizePixel=0})
+
+--local TPWoodToPrecess = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(.75,-10,0.1,20),Text="Process Wood",BorderSizePixel=0})
+
+local GlitchWood = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(0,10,0.1,20),Text="GlitchWood: Off",BorderSizePixel=0})
+
+local WalkSpeed = Create("TextBox",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.1,0,.1,0),Position=UDim2.new(0.15,10,0.2,30),Text="16",BorderSizePixel=0})
+
+local WalkSpeedName = Create("TextLabel",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.125,0,.1,0),Position=UDim2.new(0,1,0.2,30),Text="WalkSpeed:",TextSize=8,TextXAlignment="Left",BorderSizePixel=0,TextColor3=Color3.fromRGB(255,255,255),BackgroundTransparency=1})
+
+local JumpPower = Create("TextBox",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.1,0,.1,0),Position=UDim2.new(.15,10,0.3,40),Text="50",BorderSizePixel=0})
+
+local JumpPowerName = Create("TextLabel",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.125,0,.1,0),Position=UDim2.new(0,1,0.3,40),Text="JumpPower:",TextSize=8,TextXAlignment="Left",BorderSizePixel=0,TextColor3=Color3.fromRGB(255,255,255),BackgroundTransparency=1})
+
+local TabDistance = Create("TextLabel",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(0.35,0,0.02,20),Text="Length",TextColor3=Color3.fromRGB(255,255,255),BackgroundTransparency=1,BorderSizePixel=0})
+
+local Distance = Create("TextBox",{Parent=Menu,ZIndex=4,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(0.35,0,0.1,20),BackgroundColor3=Color3.fromRGB(200,200,200),Text="50",BorderSizePixel=0})
+
+local Hub2 = Create("Frame",{Parent=Main,Size=UDim2.new(0,150,0,300),Position=UDim2.new(.3,410,.5,0),Draggable=true,Visible=false,Transparency=1,ZIndex=100,Active=true})
+
+local TopBar2 = Create("Frame",{Parent=Hub2,Size=UDim2.new(1,0,.1,0),BackgroundColor3=Color3.fromRGB(218, 114, 45),BorderSizePixel=0,ZIndex=4})
+
+local Name2 = Create("TextLabel",{Parent=TopBar2,ZIndex=4,Size=UDim2.new(.5,0,1,0),Position=UDim2.new(0,10,0,0),TextStrokeTransparency=0.9,Text="WayPoints",TextColor3=Color3.fromRGB(230,230,230),BackgroundTransparency=1,TextXAlignment="Left",BorderSizePixel=0})
+
+local Menu2 = Create("ImageLabel",{Parent=Hub2,Size=UDim2.new(1,0,.9,0),ZIndex=2,ImageColor3=Color3.fromRGB(100,100,100),ScaleType="Tile",TileSize=UDim2.new(0,100,0,100),Image="rbxassetid://585867512",Position=UDim2.new(0,0,.1,0),BorderSizePixel=0})
+
+local WayPoints = Create("ScrollingFrame",{Parent=Menu2,ZIndex=4,BorderSizePixel=0,Size=UDim2.new(.8,0,.9,0),BackgroundColor3=Color3.fromRGB(50,50,50),Position=UDim2.new(.1,0,0.05,0),ScrollBarThickness=0,Transparency=0.8})
+
+local Hub3 = Create("Frame",{Parent=Main,Size=UDim2.new(0,150,0,300),Position=UDim2.new(.3,-160,.5,0),Draggable=true,Visible=false,Transparency=1,ZIndex=100,Active=true})
+
+local TopBar3 = Create("Frame",{Parent=Hub3,Size=UDim2.new(1,0,.1,0),BackgroundColor3=Color3.fromRGB(218, 114, 45),BorderSizePixel=0,ZIndex=4})
+
+local Name3 = Create("TextLabel",{Parent=TopBar3,ZIndex=4,Size=UDim2.new(.5,0,1,0),Position=UDim2.new(0,10,0,0),TextStrokeTransparency=0.9,Text="Player Bases",TextColor3=Color3.fromRGB(230,230,230),BackgroundTransparency=1,TextXAlignment="Left",BorderSizePixel=0})
+
+local Menu3 = Create("ImageLabel",{Parent=Hub3,Size=UDim2.new(1,0,.9,0),ZIndex=2,ImageColor3=Color3.fromRGB(100,100,100),ScaleType="Tile",TileSize=UDim2.new(0,100,0,100),Image="rbxassetid://585867512",Position=UDim2.new(0,0,.1,0),BorderSizePixel=0})
+
+local PlayersBases = Create("ScrollingFrame",{Parent=Menu3,ZIndex=4,BorderSizePixel=0,Size=UDim2.new(.8,0,.9,0),BackgroundColor3=Color3.fromRGB(50,50,50),Position=UDim2.new(.1,0,0.05,0),ScrollBarThickness=0,Transparency=0.8})
+
+local Hub4 = Create("Frame",{Parent=Main,Size=UDim2.new(0,150,0,300),Position=UDim2.new(.3,-330,.5,0),Draggable=true,Visible=false,Transparency=1,ZIndex=100,Active=true})
+
+local Menu4 = Create("ImageLabel",{Parent=Hub4,Size=UDim2.new(1,0,.9,0),ZIndex=2,ImageColor3=Color3.fromRGB(100,100,100),ScaleType="Tile",TileSize=UDim2.new(0,100,0,100),Image="rbxassetid://585867512",Position=UDim2.new(0,0,.1,0),BorderSizePixel=0})
+
+local TopBar4 = Create("Frame",{Parent=Hub4,Size=UDim2.new(1,0,.1,0),BackgroundColor3=Color3.fromRGB(218, 114, 45),BorderSizePixel=0,ZIndex=4})
+
+local Name3 = Create("TextLabel",{Parent=TopBar4,ZIndex=4,Size=UDim2.new(.5,0,1,0),Position=UDim2.new(0,10,0,0),TextStrokeTransparency=0.9,Text="Players",TextColor3=Color3.fromRGB(230,230,230),BackgroundTransparency=1,TextXAlignment="Left",BorderSizePixel=0})
+
+local Players = Create("ScrollingFrame",{Parent=Menu4,ZIndex=4,BorderSizePixel=0,Size=UDim2.new(.8,0,.9,0),BackgroundColor3=Color3.fromRGB(50,50,50),Position=UDim2.new(.1,0,0.05,0),ScrollBarThickness=0,Transparency=0.8})
+
+local TeleportToSpook = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(0,10,0.4,50),Text="Teleport to Spook",BorderSizePixel=0})
+
+local BlueprintToGreyWood = Create("TextButton",{Parent=Menu,ZIndex=3,Size=UDim2.new(0.25,0,.1,0),Position=UDim2.new(0,10,0.5,60),Text="Blueprint to\nGreyWood",BorderSizePixel=0})
+
+local Warning = Create("TextLabel",{Parent=Hub,ZIndex=4,Size=UDim2.new(.5,0,1,5),Position=UDim2.new(0,0,.5,10),TextStrokeTransparency=0.7,Text="Press or hold E to use the GlitchWood option.\nAfter clicking Blueprint to GreyWood pick the blueprint up then palce it back down with B/E",TextColor3=Color3.fromRGB(218, 114, 45),BackgroundTransparency=1,TextXAlignment="Left",BorderSizePixel=0})
+
+local WarningGreyWood = Create("TextLabel",{Parent=Hub,ZIndex=4,Size=UDim2.new(.5,0,1,55),Position=UDim2.new(0,0,.5,10),TextStrokeTransparency=0.7,Text="Some Blueprints do not turn to GreyWood so if you lose a Blueprint oh well. \nand dont try to cut trees with their corresponding super axe you will die.",TextColor3=Color3.fromRGB(255, 0, 0),BackgroundTransparency=1,TextXAlignment="Left",BorderSizePixel=0})
+
+local Minimize = Create("TextButton",{Parent=TopBar,ZIndex=4,Size=UDim2.new(.1,0,1,0),Position=UDim2.new(.85,0,0,0),TextScaled=true,TextSize=14,BackgroundTransparency=1,Text="-"})
+
+local Minimize2 = Create("TextButton",{Parent=TopBar2,ZIndex=4,Size=UDim2.new(.1,0,1,0),Position=UDim2.new(.85,0,0,0),TextScaled=true,TextSize=14,BackgroundTransparency=1,Text="-"})
+
+local Minimize3 = Create("TextButton",{Parent=TopBar3,ZIndex=4,Size=UDim2.new(.1,0,1,0),Position=UDim2.new(.85,0,0,0),TextScaled=true,TextSize=14,BackgroundTransparency=1,Text="-"})
+
+local Minimize4 = Create("TextButton",{Parent=TopBar4,ZIndex=4,Size=UDim2.new(.1,0,1,0),Position=UDim2.new(.85,0,0,0),TextScaled=true,TextSize=14,BackgroundTransparency=1,Text="-"})
+
+
+
+
+
+MakeShadow(TopBar,3)
+
+MakeShadow(Hub,1)
+
+MakeShadow(Hub2,1)
+
+MakeShadow(TopBar2,3)
+
+MakeShadow(Hub3,1)
+
+MakeShadow(TopBar3,3)
+
+MakeShadow(Hub4,1)
+
+MakeShadow(TopBar4,3)
+
+MakeShadow(TPWood,2)
+
+MakeShadow(GlitchWood,2)
+
+MakeShadow(Distance,2)
+
+MakeShadow(Open,0)
+
+MakeShadow(WalkSpeed,2)
+
+MakeShadow(JumpPower,2)
+
+MakeShadow(TPWoodToSell,2)
+
+MakeShadow(TeleportToSpook,2)
+
+--MakeShadow(TPWoodToPrecess,2)
+
+MakeShadow(BlueprintToGreyWood,2)
+
+MakeShadow(GodMode,2)
+
+
+
+local numb=0
+
+for key,value in next, WayPointss do
+
+	WayPoints.CanvasSize=UDim2.new(0,0,0,30*numb)
+
+	local button = Create("TextButton",{Parent=WayPoints,Text=key,Size=UDim2.new(1,0,0,20),ZIndex=4,BorderSizePixel=0,Position=UDim2.new(0,0,0,30*numb)})
+
+	MakeShadow(button,3)
+
+	numb=numb+1
+
+	button.MouseButton1Click:Connect(function()
+
+		service.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(value.p+Vector3.new(0,5,0))
+
+	end)
+
+end
+
+local numbb=0
+
+for i,v in pairs(service.Workspace.Properties:GetChildren()) do
+
+	if v.Owner and v.Owner.Value  then
+
+		PlayersBases.CanvasSize=UDim2.new(0,0,0,30*numbb)
+
+		local button = Create("TextButton",{Parent=PlayersBases,Text=v.Owner.Value.Name,Size=UDim2.new(1,0,0,20),ZIndex=4,BorderSizePixel=0,Position=UDim2.new(0,0,0,30*numbb)})
+
+		MakeShadow(button,3)
+
+		numbb=numbb+1
+
+		button.MouseButton1Click:Connect(function()
+
+			service.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(v.OriginSquare.Position+Vector3.new(0,5,0))
+
+		end)
+
+	end
+
+	v.Owner.Changed:Connect(function()
+
+		numbb=0
+
+		PlayersBases:ClearAllChildren()
+
+		for i,v in pairs(service.Workspace.Properties:GetChildren()) do
+
+			if v.Owner and v.Owner.Value then
+
+				PlayersBases.CanvasSize=UDim2.new(0,0,0,30*numbb)
+
+				local button = Create("TextButton",{Parent=PlayersBases,Text=v.Owner.Value.Name,Size=UDim2.new(1,0,0,20),ZIndex=4,BorderSizePixel=0,Position=UDim2.new(0,0,0,30*numbb)})
+
+				MakeShadow(button,3)
+
+				numbb=numbb+1
+
+				button.MouseButton1Click:Connect(function()
+
+					service.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(v.OriginSquare.Position+Vector3.new(0,5,0))
+
+				end)
+
+			end
+
+		end
+
+		numbb=0
+
+	end)
+
+end
+
+
+
+local numbbb=0
+
+for i,v in pairs(service.Players:GetPlayers()) do
+
+	if v.Character then
+
+		Players.CanvasSize=UDim2.new(0,0,0,30*numbbb)
+
+		local button = Create("TextButton",{Parent=Players,Text=v.Name,Size=UDim2.new(1,0,0,20),ZIndex=4,BorderSizePixel=0,Position=UDim2.new(0,0,0,30*numbbb)})
+
+		MakeShadow(button,3)
+
+		numbbb=numbbb+1
+
+		button.MouseButton1Click:Connect(function()
+
+			service.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(v.Character.HumanoidRootPart.Position+Vector3.new(0,5,0))
+
+		end)
+
+	end
+
+end
+
+service.Players.PlayerAdded:Connect(function()
+
+	numbbb=0
+
+	Players:ClearAllChildren()
+
+	for i,v in pairs(service.Players:GetPlayers()) do
+
+		while not v.Character do wait() end
+
+		if v.Character then
+
+			Players.CanvasSize=UDim2.new(0,0,0,30*numbbb)
+
+			local button = Create("TextButton",{Parent=Players,Text=v.Name,Size=UDim2.new(1,0,0,20),ZIndex=4,BorderSizePixel=0,Position=UDim2.new(0,0,0,30*numbbb)})
+
+			MakeShadow(button,3)
+
+			numbbb=numbbb+1
+
+			button.MouseButton1Click:Connect(function()
+
+				service.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(v.Character.HumanoidRootPart.Position+Vector3.new(0,5,0))
+
+			end)
+
+		end
+
+	end
+
+	numbbb=0
+
+end)
+
+service.Players.PlayerRemoving:Connect(function()
+
+	numbbb=0
+
+	Players:ClearAllChildren()
+
+	for i,v in pairs(service.Players:GetPlayers()) do
+
+		if v.Character then
+
+			Players.CanvasSize=UDim2.new(0,0,0,30*numbbb)
+
+			local button = Create("TextButton",{Parent=Players,Text=v.Name,Size=UDim2.new(1,0,0,20),ZIndex=4,BorderSizePixel=0,Position=UDim2.new(0,0,0,30*numbbb)})
+
+			MakeShadow(button,3)
+
+			numbbb=numbbb+1
+
+			button.MouseButton1Click:Connect(function()
+
+				service.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(v.Character.HumanoidRootPart.Position+Vector3.new(0,5,0))
+
+			end)
+
+		end
+
+	end
+
+	numbbb=0
+
+end)
+
+
+
+Minimize.MouseButton1Click:Connect(function()
+
+	if Menu.Visible==true then
+
+		Menu.Visible=false
+
+		Warning.Visible=false
+
+		SetTransOfShadow(1,Hub)
+
+	else
+
+		Menu.Visible=true
+
+		Warning.Visible=true
+
+		SetTransOfShadow(0.9,Hub)
+
+	end
+
+end)
+
+
+
+Minimize2.MouseButton1Click:Connect(function()
+
+	if Menu2.Visible==true then
+
+		Menu2.Visible=false
+
+		SetTransOfShadow(1,Hub2)
+
+	else
+
+		Menu2.Visible=true
+
+		SetTransOfShadow(0.9,Hub2)
+
+	end
+
+end)
+
+
+
+Minimize3.MouseButton1Click:Connect(function()
+
+	if Menu3.Visible==true then
+
+		Menu3.Visible=false
+
+		SetTransOfShadow(1,Hub3)
+
+	else
+
+		Menu3.Visible=true
+
+		SetTransOfShadow(0.9,Hub3)
+
+	end
+
+end)
+
+
+
+Minimize4.MouseButton1Click:Connect(function()
+
+	if Menu4.Visible==true then
+
+		Menu4.Visible=false
+
+		SetTransOfShadow(1,Hub4)
+
+	else
+
+		Menu4.Visible=true
+
+		SetTransOfShadow(0.9,Hub4)
+
+	end
+
+end)
+
+
+
+Exit.MouseButton1Click:Connect(function()
+
+	if Hub.Visible then
+
+		Hub.Visible=false
+
+		Hub2.Visible=false
+
+		Hub3.Visible=false
+
+		Hub4.Visible=false
+
+		Open.Visible=true
+
+	end
+
+end)
+
+
+
+Open.MouseButton1Click:Connect(function()
+
+	if not Hub.Visible then
+
+		Hub.Visible=true
+
+		Hub2.Visible=true
+
+		Hub3.Visible=true
+
+		Hub4.Visible=true
+
+		Open.Visible=false
+
+	end
+
+end)
+
+
+
+GodMode.MouseButton1Click:Connect(function()
+
+	god()
+
+end)
+
+
+
+WalkSpeed.Changed:Connect(function()
+
+	Walk=tonumber(WalkSpeed.Text)
+
+end)
+
+
+
+BlueprintToGreyWood.MouseButton1Click:Connect(function()
+
+	for i,v in next,workspace.PlayerModels:GetChildren() do
+
+        if v:FindFirstChild("Type") then
+
+            if v.Type.Value == "Blueprint" then
+
+                v.Type.Value = "Structure"
+
+            end
+
+        end
+
+    end
+
+end)
+
+
+
+JumpPower.Changed:Connect(function()
+
+	Jump=tonumber(JumpPower.Text)
+
+end)
+
+
+
+service.Players.LocalPlayer.Character.Humanoid.Changed:Connect(function()
+
+	if service.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+
+		service.Players.LocalPlayer.Character.Humanoid.WalkSpeed=Walk
+
+		service.Players.LocalPlayer.Character.Humanoid.JumpPower=Jump
+
+	end
+
+end)
+
+
+
+BlueprintToGreyWood.MouseButton1Click:Connect(function()
+
+	for i,v in next,workspace.PlayerModels:GetChildren() do
+
+	    if v:FindFirstChild("Type") then
+
+	        if v.Type.Value == "Blueprint" then
+
+	            v.Type.Value = "Structure"
+
+	        end
+
+	    end
+
+	end
+
+end)
+
+
+
+TPWood.MouseButton1Click:Connect(function()
+
+	for _, Log in pairs(service.Workspace.LogModels:GetChildren()) do
+
+		if Log.Name:sub(1, 6) == "Loose_" and Log:findFirstChild("Owner") then
+
+			if Log.Owner.Value == service.Players.LocalPlayer then
+
+				Log:MoveTo(service.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 20, 0))
+
+				for i=1,100 do
+
+					service.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(Log)
+
+				end
+
+			end
+
+		end
+
+	end
+
+end)
+
+
+
+TPWoodToSell.MouseButton1Click:Connect(function()
+
+	for _, Log in pairs(service.Workspace.LogModels:GetChildren()) do
+
+		if Log.Name:sub(1, 6) == "Loose_" and Log:findFirstChild("Owner") then
+
+			if Log.Owner.Value == service.Players.LocalPlayer then
+
+				for i,v in pairs(Log:GetChildren()) do
+
+					if v.Name=="WoodSection" then
+
+						spawn(function()
+
+							for i=1,10 do
+
+								wait()
+
+								v.CFrame=CFrame.new(Vector3.new(315, -0.296, 85.791))*CFrame.Angles(math.rad(90),0,0)
+
+							end
+
+						end)
+
+					end
+
+				end
+
+				spawn(function()
+
+					for i=1,20 do
+
+						wait()
+
+						service.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(Log)
+
+					end
+
+				end)
+
+			end
+
+		end
+
+	end
+
+end)
+
+
+
+TeleportToSpook.MouseButton1Click:Connect(function()
+
+	for i, v in pairs(game.Workspace:GetChildren()) do
+
+	    if v.Name == "TreeRegion" then
+
+	        for j, k in ipairs(v:GetChildren()) do
+
+	            if k:FindFirstChild("TreeClass") and k.TreeClass.Value == "Spooky" or k:FindFirstChild("TreeClass") and k.TreeClass.Value == "SpookyNeon" then
+
+	                game.Players.LocalPlayer.Character:MoveTo(k.WoodSection.Position)
+
+					break
+
+	            end
+
+	        end
+
+	    end
+
+	end
+
+end)
+
+
+
+GlitchWood.MouseButton1Click:Connect(function()
+
+	if not Glitching then
+
+		Glitching=true
+
+		GlitchWood.Text="GlitchWood: On"
+
+	else
+
+		Glitching=false
+
+		GlitchWood.Text="GlitchWood: Off"
+
+	end
+
+end)
+
+
+
+local Pressing = false
+
+
+
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+
+    if key=="e" and Glitching then
+
+        Pressing=true
+
+        poop(GetAxe())
+
+    end
+
+end)
+
+
+
+game.Players.LocalPlayer:GetMouse().KeyUp:Connect(function(key)
+
+    if key=="e" then
+
+        Pressing=false
+
+    end
+
+end)
+
+
+
+function cut(Height,Tool)
+
+	local Tree=game.Players.LocalPlayer:GetMouse().Target
+
+	game.ReplicatedStorage.Interaction.RemoteProxy:FireServer(Tree.Parent.CutEvent,{
+
+	["cuttingClass"] = "Axe",
+
+	["cooldown"] = 0,
+
+	["hitPoints"] = HitPoints[Tool.ToolName.Value],
+
+	["sectionId"] = 1,
+
+	["tool"] = Tool,
+
+	["faceVector"] = Vector3.new(-1,0,0),
+
+	["height"] = Height})
+
+end
+
+
+
+function poop(Tool)
+
+    while Pressing do
+
+        for i=1,50 do
+
+			wait()
+
+			cut(tonumber(Distance.Text),Tool)
+
+			cut(1,Tool)
+
+		end
+
+    end
+
+end
+
+
+
+----Fly function
+
+
+
+do
+
+	function fly()
+
+	
+
+	for i,v in pairs(script:GetChildren()) do
+
+		pcall(function() v.Value = "" end)
+
+		game:GetService("Debris"):AddItem(v,.1)
+
+	end	
+
+	
+
+	function weld(p0,p1,c0,c1,par)
+
+		local w = Instance.new("Weld",p0 or par)
+
+		w.Part0 = p0
+
+		w.Part1 = p1
+
+		w.C0 = c0 or CFrame.new()
+
+		w.C1 = c1 or CFrame.new()
+
+		return w
+
+	end
+
+	
+
+	local motors = {}
+
+	
+
+	function motor(p0,p1,c0,c1,des,vel,par)
+
+		local w = Instance.new("Motor6D",p0 or par)
+
+		w.Part0 = p0
+
+		w.Part1 = p1
+
+		w.C0 = c0 or CFrame.new()
+
+		w.C1 = c1 or CFrame.new()
+
+		w.MaxVelocity = tonumber(vel) or .05
+
+		w.DesiredAngle = tonumber(des) or 0
+
+		return w
+
+	end
+
+	
+
+	function lerp(a,b,c)
+
+	    return a+(b-a)*c
+
+	end
+
+	
+
+	function clerp(c1,c2,al)
+
+		local com1 = {c1.X,c1.Y,c1.Z,c1:toEulerAnglesXYZ()}
+
+		local com2 = {c2.X,c2.Y,c2.Z,c2:toEulerAnglesXYZ()}
+
+		for i,v in pairs(com1) do
+
+			com1[i] = lerp(v,com2[i],al)
+
+		end
+
+		return CFrame.new(com1[1],com1[2],com1[3]) * CFrame.Angles(select(4,unpack(com1)))
+
+	end
+
+	
+
+	function ccomplerp(c1,c2,al)
+
+		local com1 = {c1:components()}
+
+		local com2 = {c2:components()}
+
+		for i,v in pairs(com1) do
+
+			com1[i] = lerp(v,com2[i],al)
+
+		end
+
+		return CFrame.new(unpack(com1))
+
+	end
+
+	
+
+	function tickwave(time,length,offset)
+
+		return (math.abs((tick()+(offset or 0))%time-time/2)*2-time/2)/time/2*length
+
+	end
+
+	
+
+	function invcol(c)
+
+		c = c.Color
+
+		return BrickColor.new(Color3.new(1-c.b,1-c.g,1-c.r))
+
+	end
+
+	local oc = oc or function(...) return ... end
+
+	local plr = game.Players.LocalPlayer
+
+	local char = plr.Character
+
+	local tor = char.Torso
+
+	local hum = char.Humanoid
+
+	hum.PlatformStand = false
+
+	pcall(function()
+
+		char.Wings:Destroy()
+
+	end)
+
+	pcall(function()
+
+		char.Angel:Destroy() -- hat
+
+	end)
+
+	local mod = Instance.new("Model",char)
+
+	mod.Name = "Wings"
+
+	local special = {
+
+		[game.Players.LocalPlayer.Name] = {"Black","Bright red",.5,0,false,Color3.new(1,0,0),Color3.new(0,0,0)},
+
+	}
+
+	local topcolor = BrickColor.new("Really black")
+
+	local feacolor = BrickColor.new("Black")
+
+	local ptrans = 0
+
+	local pref = 0
+
+	local fire = true
+
+	local fmcol = Color3.new()
+
+	local fscol = Color3.new()
+
+	local spec = special[plr.Name:lower()]
+
+	if spec then
+
+		topcolor,feacolor,ptrans,pref,fire,fmcol,fscol = spec[1] and BrickColor.new(spec[1]) or topcolor,spec[2] and BrickColor.new(spec[2]) or feacolor,spec[3],spec[4],spec[5],spec[6],spec[7]
+
+	end
+
+	local part = Instance.new("Part")
+
+	part.FormFactor = "Custom"
+
+	part.Size = Vector3.new(.2,.2,.2)
+
+	part.TopSurface,part.BottomSurface = 0,0
+
+	part.CanCollide = false
+
+	part.BrickColor = BrickColor.new("Black")
+
+	part.Transparency = ptrans
+
+	part.Reflectance = pref
+
+	local ef = Instance.new("Fire",fire and part or nil)
+
+	ef.Size = .15
+
+	ef.Color = BrickColor.new("Black").Color
+
+	ef.SecondaryColor = BrickColor.new("Bright red").Color
+
+	part:BreakJoints()
+
+	function newpart()
+
+		local clone = part:Clone()
+
+		clone.Parent = mod
+
+		clone:BreakJoints()
+
+		return clone
+
+	end
+
+	local feath = newpart()
+
+	feath.BrickColor = feacolor
+
+	feath.Transparency = 0
+
+	Instance.new("SpecialMesh",feath).MeshType = "Sphere"
+
+	function newfeather()
+
+		local clone = feath:Clone()
+
+		clone.Parent = mod
+
+		clone:BreakJoints()
+
+		return clone
+
+	end
+
+	
+
+	---------- RIGHT WING
+
+	
+
+	flying = false
+
+	moving = false
+
+	for i,v in pairs(tor:GetChildren()) do
+
+		if v.ClassName:lower():match("body") then
+
+			v:Destroy()
+
+		end
+
+	end
+
+	local ctor = tor:Clone()
+
+	ctor:ClearAllChildren()
+
+	ctor.Name = "cTorso"
+
+	ctor.Transparency = 1
+
+	ctor.CanCollide = false
+
+	ctor.FormFactor = "Custom"
+
+	ctor.Size = Vector3.new(.2,.2,.2)
+
+	ctor.Parent = mod
+
+	weld(tor,ctor)
+
+	local bg = Instance.new("BodyGyro",ctor)
+
+	bg.maxTorque = Vector3.new()
+
+	bg.P = 15000
+
+	bg.D = 1000
+
+	local bv = Instance.new("BodyVelocity",ctor)
+
+	bv.maxForce = Vector3.new()
+
+	bv.P = 15000
+
+	vel = Vector3.new()
+
+	cf = CFrame.new()
+
+	flspd = 0
+
+	keysdown = {}
+
+	keypressed = {}
+
+	ktime = {}
+
+	descendtimer = 0
+
+	jumptime = tick()
+
+	hum.Jumping:connect(function()
+
+		jumptime = tick()
+
+	end)
+
+	cam = workspace.CurrentCamera
+
+	kd = plr:GetMouse().KeyDown:connect(oc(function(key) 
+
+		keysdown[key] = true 
+
+		keypressed[key] = true 
+
+		if key == "q" then 
+
+			descendtimer = tick() 
+
+		elseif key == " " and not hum.Jump then 
+
+			jumptime = tick()
+
+		elseif (key == "a" or key == "d") and ktime[key] and tick()-ktime[key] < .3 and math.abs(reqrotx) < .3 then
+
+			reqrotx = key == "a" and math.pi*2 or -math.pi*2
+
+		end
+
+		ktime[key] = tick() 
+
+	end))
+
+	
+
+	ku = plr:GetMouse().KeyUp:connect(function(key) 
+
+		keysdown[key] = false 
+
+		if key == " " then 
+
+			descendtimer = tick() 
+
+		end 
+
+	end)
+
+	function mid(a,b,c)
+
+		return math.max(a,math.min(b,c or -a))
+
+	end
+
+	function bn(a)
+
+		return a and 1 or 0
+
+	end
+
+	function gm(tar)
+
+		local m = 0
+
+		for i,v in pairs(tar:GetChildren()) do
+
+			if v:IsA("BasePart") then
+
+				m = m + v:GetMass()
+
+			end
+
+			m = m + gm(v)
+
+		end
+
+		return m
+
+	end
+
+	reqrotx = 0
+
+	local grav = 196.2
+
+	local con
+
+	con = game:GetService("RunService").Stepped:connect(oc(function()
+
+		local obvel = tor.CFrame:vectorToObjectSpace(tor.Velocity)
+
+		local sspd, uspd,fspd = obvel.X,obvel.Y,obvel.Z
+
+		if flying then
+
+			local lfldir = fldir
+
+			fldir = cam.CoordinateFrame:vectorToWorldSpace(Vector3.new(bn(keysdown.d)-bn(keysdown.a),0,bn(keysdown.s)-bn(keysdown.w))).unit
+
+			local lmoving = moving
+
+			moving = fldir.magnitude > .1
+
+			if lmoving and not moving then
+
+				idledir = lfldir*Vector3.new(1,0,1)
+
+				descendtimer = tick()
+
+			end
+
+			local dbomb = fldir.Y < -.6 or (moving and keysdown["1"])
+
+			if moving and keysdown["0"] and lmoving then
+
+				fldir = (Vector3.new(lfldir.X,math.min(fldir.Y,lfldir.Y+.01)-.1,lfldir.Z)+(fldir*Vector3.new(1,0,1))*.05).unit
+
+			end
+
+			local down = tor.CFrame:vectorToWorldSpace(Vector3.new(0,-1,0))
+
+			local descending = (not moving and keysdown["q"] and not keysdown[" "])
+
+			cf = ccomplerp(cf,CFrame.new(tor.Position,tor.Position+(not moving and idledir or fldir)),keysdown["0"] and .02 or .07)
+
+			local gdown = not dbomb and cf.lookVector.Y < -.2 and tor.Velocity.unit.Y < .05
+
+			hum.PlatformStand = true
+
+			bg.maxTorque = Vector3.new(1,1,1)*9e5
+
+			local rotvel = CFrame.new(Vector3.new(),tor.Velocity):toObjectSpace(CFrame.new(Vector3.new(),fldir)).lookVector
+
+			bg.cframe = cf * CFrame.Angles(not moving and -.1 or -math.pi/2+.2,moving and mid(-2.5,rotvel.X/1.5) + reqrotx or 0,0)
+
+			reqrotx = reqrotx - reqrotx/10
+
+			bv.maxForce = Vector3.new(1,1,1)*9e4*.5
+
+			local anioff =(bn(keysdown[" "])-bn(keysdown["q"]))/2
+
+			local ani = tickwave(1.5-anioff,1)
+
+			bv.velocity = bv.velocity:Lerp(Vector3.new(0,bn(not moving)*-ani*15+(descending and math.min(20,tick()-descendtimer)*-8 or bn(keysdown[" "])-bn(keysdown["q"]))*15,0)+vel,.6) 
+
+			vel = moving and cf.lookVector*flspd or Vector3.new()
+
+			flspd = math.min(120,lerp(flspd,moving and (fldir.Y<0 and flspd+(-fldir.Y)*grav/60 or math.max(50,flspd-fldir.Y*grav/300)) or 60,.4))
+
+			local hit,ray = workspace:FindPartOnRayWithIgnoreList(Ray.new(tor.Position,Vector3.new(0,-3.5+math.min(0,bv.velocity.y)/30,0)),{char})
+
+			if hit and down.Y < -.85 and tick()-flystart > 1 then
+
+				flying = false
+
+				hum.PlatformStand = false
+
+				tor.Velocity = Vector3.new()
+
+			end
+
+		else
+
+			bg.maxTorque = Vector3.new()
+
+			bv.maxForce = Vector3.new()
+
+			local x,y,z = fspd/160,uspd/700,sspd/900
+
+			if keypressed[" "] and not flying and (tick()-jumptime > .05 and (tick()-jumptime < 3 or hum.Jump)) then
+
+				vel = Vector3.new(0,50,0)
+
+				bv.velocity = vel
+
+				idledir = cam.CoordinateFrame.lookVector*Vector3.new(1,0,1)
+
+				cf = tor.CFrame * CFrame.Angles(-.01,0,0)
+
+				tor.CFrame = cf
+
+				bg.cframe = cf
+
+				flystart = tick()
+
+				flying = true
+
+			end
+
+		end
+
+		keypressed = {}
+
+	end))
+
+	end
+
+	fly()
+
+end

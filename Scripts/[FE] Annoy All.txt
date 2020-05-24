@@ -1,0 +1,14 @@
+--//peeps fe spam tp (annoy)
+
+local player = game:GetService("Players").LocalPlayer
+local value = 1
+local ammount = 10 --//ammount here
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+	for i=1, ammount do
+		value = value + 1
+		math.randomseed(os.time() + value)
+		wait(0.1)
+		player.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+	end
+end
+print("fe spam tp activated")

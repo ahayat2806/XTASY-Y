@@ -1,0 +1,2697 @@
+-- Objects
+
+
+
+local DBFS = Instance.new("ScreenGui")
+
+local WelcomeFrame = Instance.new("Frame")
+
+local b = Instance.new("Frame")
+
+local b1 = Instance.new("Frame")
+
+local DBFSTPGUI1 = Instance.new("TextLabel")
+
+local OPEN = Instance.new("TextButton")
+
+local MainFrame = Instance.new("Frame")
+
+local bar4 = Instance.new("Frame")
+
+local DBFSTPGUI = Instance.new("TextLabel")
+
+local CloseButton = Instance.new("TextButton")
+
+local DBLocations = Instance.new("TextButton")
+
+local Credits = Instance.new("TextLabel")
+
+local bar3 = Instance.new("Frame")
+
+local MiscLocations = Instance.new("TextButton")
+
+local ShipLocations = Instance.new("TextButton")
+
+local CityLocations = Instance.new("TextButton")
+
+local VeilFix = Instance.new("TextButton")
+
+local DBLocations2 = Instance.new("Frame")
+
+local bar2 = Instance.new("Frame")
+
+local bar1 = Instance.new("Frame")
+
+local LocFrame = Instance.new("ScrollingFrame")
+
+local Background = Instance.new("Frame")
+
+local DB1 = Instance.new("TextButton")
+
+local DB2 = Instance.new("TextButton")
+
+local DB3 = Instance.new("TextButton")
+
+local DB4 = Instance.new("TextButton")
+
+local DB6 = Instance.new("TextButton")
+
+local DB8 = Instance.new("TextButton")
+
+local DB5 = Instance.new("TextButton")
+
+local DB7 = Instance.new("TextButton")
+
+local DB10 = Instance.new("TextButton")
+
+local DB12 = Instance.new("TextButton")
+
+local DB14 = Instance.new("TextButton")
+
+local DB16 = Instance.new("TextButton")
+
+local DB9 = Instance.new("TextButton")
+
+local DB11 = Instance.new("TextButton")
+
+local DB13 = Instance.new("TextButton")
+
+local DB15 = Instance.new("TextButton")
+
+local DB17 = Instance.new("TextButton")
+
+local DB18 = Instance.new("TextButton")
+
+local DB20 = Instance.new("TextButton")
+
+local DB19 = Instance.new("TextButton")
+
+local DB22 = Instance.new("TextButton")
+
+local DB24 = Instance.new("TextButton")
+
+local DB26 = Instance.new("TextButton")
+
+local DB28 = Instance.new("TextButton")
+
+local DB30 = Instance.new("TextButton")
+
+local DB21 = Instance.new("TextButton")
+
+local DB23 = Instance.new("TextButton")
+
+local DB25 = Instance.new("TextButton")
+
+local DB27 = Instance.new("TextButton")
+
+local DB29 = Instance.new("TextButton")
+
+local DBLocText = Instance.new("TextLabel")
+
+local TextButton = Instance.new("TextButton")
+
+local CityFrame = Instance.new("Frame")
+
+local bar5 = Instance.new("Frame")
+
+local bar6 = Instance.new("Frame")
+
+local CityLoc = Instance.new("TextLabel")
+
+local Xbut = Instance.new("TextButton")
+
+local WestCity = Instance.new("TextButton")
+
+local EastCity = Instance.new("TextButton")
+
+local SouthCity = Instance.new("TextButton")
+
+local SatanCity = Instance.new("TextButton")
+
+local GingerTown = Instance.new("TextButton")
+
+local CentralCity = Instance.new("TextButton")
+
+local ShipFrame = Instance.new("Frame")
+
+local bar7 = Instance.new("Frame")
+
+local bar8 = Instance.new("Frame")
+
+local Namek = Instance.new("TextButton")
+
+local Space = Instance.new("TextButton")
+
+local Futre = Instance.new("TextButton")
+
+local ShipLoc = Instance.new("TextLabel")
+
+local CloseBut = Instance.new("TextButton")
+
+local MiscFrame = Instance.new("Frame")
+
+local bar9 = Instance.new("Frame")
+
+local bar10 = Instance.new("Frame")
+
+local MiscLoc = Instance.new("TextLabel")
+
+local Closebutton1 = Instance.new("TextButton")
+
+local Korin = Instance.new("TextButton")
+
+local Lookout = Instance.new("TextButton")
+
+local Kame = Instance.new("TextButton")
+
+local Goku = Instance.new("TextButton")
+
+local Capsule = Instance.new("TextButton")
+
+
+
+-- Properties
+
+
+
+DBFS.Name = "DBFS"
+
+DBFS.Parent = game.CoreGui
+
+DBFS.ResetOnSpawn = false
+
+
+
+WelcomeFrame.Name = "WelcomeFrame"
+
+WelcomeFrame.Parent = DBFS
+
+WelcomeFrame.Active = true
+
+WelcomeFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+WelcomeFrame.BorderSizePixel = 0
+
+WelcomeFrame.Draggable = true
+
+WelcomeFrame.Position = UDim2.new(0.0312170591, 0, 0.0549087822, 0)
+
+WelcomeFrame.Size = UDim2.new(0, 223, 0, 227)
+
+
+
+b.Name = "b"
+
+b.Parent = WelcomeFrame
+
+b.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+b.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+b.BorderSizePixel = 0
+
+b.Position = UDim2.new(-0.00224215258, 0, 0, 0)
+
+b.Size = UDim2.new(0, 222, 0, 23)
+
+
+
+b1.Name = "b1"
+
+b1.Parent = WelcomeFrame
+
+b1.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+b1.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+b1.BorderSizePixel = 0
+
+b1.Position = UDim2.new(0, 0, 0.101321585, 0)
+
+b1.Size = UDim2.new(0, 223, 0, 4)
+
+
+
+DBFSTPGUI1.Name = "DBFSTPGUI1"
+
+DBFSTPGUI1.Parent = WelcomeFrame
+
+DBFSTPGUI1.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+DBFSTPGUI1.BorderSizePixel = 0
+
+DBFSTPGUI1.Position = UDim2.new(0.0493273549, 0, 0.154185027, 0)
+
+DBFSTPGUI1.Size = UDim2.new(0, 199, 0, 26)
+
+DBFSTPGUI1.Font = Enum.Font.SourceSansBold
+
+DBFSTPGUI1.Text = "DBFS TP GUI"
+
+DBFSTPGUI1.TextColor3 = Color3.new(1, 1, 1)
+
+DBFSTPGUI1.TextScaled = true
+
+DBFSTPGUI1.TextSize = 20
+
+DBFSTPGUI1.TextWrapped = true
+
+
+
+OPEN.Name = "OPEN"
+
+OPEN.Parent = WelcomeFrame
+
+OPEN.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+OPEN.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+OPEN.BorderSizePixel = 4
+
+OPEN.Position = UDim2.new(0.0538116582, 0, 0.50220263, 0)
+
+OPEN.Size = UDim2.new(0, 200, 0, 33)
+
+OPEN.Font = Enum.Font.SourceSansBold
+
+OPEN.Text = "OPEN GUI"
+
+OPEN.TextColor3 = Color3.new(1, 1, 1)
+
+OPEN.TextScaled = true
+
+OPEN.TextSize = 14
+
+OPEN.TextWrapped = true
+
+
+
+MainFrame.Name = "MainFrame"
+
+MainFrame.Parent = DBFS
+
+MainFrame.Active = true
+
+MainFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+MainFrame.BorderSizePixel = 0
+
+MainFrame.Draggable = true
+
+MainFrame.Position = UDim2.new(0.579500258, 0, 0.133703947, 0)
+
+MainFrame.Size = UDim2.new(0, 322, 0, 306)
+
+MainFrame.Visible = false
+
+
+
+bar4.Name = "bar4"
+
+bar4.Parent = MainFrame
+
+bar4.Active = true
+
+bar4.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar4.BorderSizePixel = 0
+
+bar4.Size = UDim2.new(0, 322, 0, 27)
+
+
+
+DBFSTPGUI.Name = "DBFSTPGUI"
+
+DBFSTPGUI.Parent = MainFrame
+
+DBFSTPGUI.Active = true
+
+DBFSTPGUI.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DBFSTPGUI.BorderSizePixel = 0
+
+DBFSTPGUI.Position = UDim2.new(0.0217391308, 0, 0.00326797389, 0)
+
+DBFSTPGUI.Size = UDim2.new(0, 181, 0, 26)
+
+DBFSTPGUI.Font = Enum.Font.SourceSansBold
+
+DBFSTPGUI.Text = "DBFS TP GUI"
+
+DBFSTPGUI.TextColor3 = Color3.new(1, 1, 1)
+
+DBFSTPGUI.TextScaled = true
+
+DBFSTPGUI.TextSize = 20
+
+DBFSTPGUI.TextWrapped = true
+
+DBFSTPGUI.TextXAlignment = Enum.TextXAlignment.Left
+
+
+
+CloseButton.Name = "CloseButton"
+
+CloseButton.Parent = MainFrame
+
+CloseButton.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+CloseButton.BorderSizePixel = 0
+
+CloseButton.Position = UDim2.new(0.906832278, 0, 0, 0)
+
+CloseButton.Size = UDim2.new(0, 30, 0, 27)
+
+CloseButton.Font = Enum.Font.Cartoon
+
+CloseButton.Text = "X"
+
+CloseButton.TextColor3 = Color3.new(1, 1, 1)
+
+CloseButton.TextScaled = true
+
+CloseButton.TextSize = 14
+
+CloseButton.TextWrapped = true
+
+
+
+DBLocations.Name = "DBLocations"
+
+DBLocations.Parent = MainFrame
+
+DBLocations.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DBLocations.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DBLocations.BorderSizePixel = 4
+
+DBLocations.Position = UDim2.new(0.0403726697, 0, 0.130718961, 0)
+
+DBLocations.Size = UDim2.new(0, 126, 0, 53)
+
+DBLocations.Font = Enum.Font.SourceSansBold
+
+DBLocations.Text = "DragonBall Locations"
+
+DBLocations.TextColor3 = Color3.new(0.992157, 0.992157, 0.992157)
+
+DBLocations.TextScaled = true
+
+DBLocations.TextSize = 14
+
+DBLocations.TextWrapped = true
+
+
+
+Credits.Name = "Credits"
+
+Credits.Parent = MainFrame
+
+Credits.Active = true
+
+Credits.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+Credits.BorderSizePixel = 0
+
+Credits.Position = UDim2.new(0, 0, 0.921568632, 0)
+
+Credits.Size = UDim2.new(0, 177, 0, 24)
+
+Credits.Font = Enum.Font.SciFi
+
+Credits.Text = "By NeonForce#2086"
+
+Credits.TextColor3 = Color3.new(1, 1, 1)
+
+Credits.TextScaled = true
+
+Credits.TextSize = 14
+
+Credits.TextWrapped = true
+
+Credits.TextXAlignment = Enum.TextXAlignment.Left
+
+
+
+bar3.Name = "bar3"
+
+bar3.Parent = MainFrame
+
+bar3.Active = true
+
+bar3.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+bar3.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar3.BorderSizePixel = 0
+
+bar3.Position = UDim2.new(0, 0, 0.0882352963, 0)
+
+bar3.Size = UDim2.new(0, 322, 0, 4)
+
+
+
+MiscLocations.Name = "MiscLocations"
+
+MiscLocations.Parent = MainFrame
+
+MiscLocations.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+MiscLocations.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+MiscLocations.BorderSizePixel = 4
+
+MiscLocations.Position = UDim2.new(0.549689412, 0, 0.53594774, 0)
+
+MiscLocations.Size = UDim2.new(0, 132, 0, 53)
+
+MiscLocations.Font = Enum.Font.SourceSansBold
+
+MiscLocations.Text = "Misc."
+
+MiscLocations.TextColor3 = Color3.new(0.992157, 0.992157, 0.992157)
+
+MiscLocations.TextSize = 35
+
+MiscLocations.TextWrapped = true
+
+
+
+ShipLocations.Name = "ShipLocations"
+
+ShipLocations.Parent = MainFrame
+
+ShipLocations.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+ShipLocations.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+ShipLocations.BorderSizePixel = 4
+
+ShipLocations.Position = UDim2.new(0.0403726697, 0, 0.53594774, 0)
+
+ShipLocations.Size = UDim2.new(0, 126, 0, 53)
+
+ShipLocations.Font = Enum.Font.SourceSansBold
+
+ShipLocations.Text = "Ship Locations"
+
+ShipLocations.TextColor3 = Color3.new(0.992157, 0.992157, 0.992157)
+
+ShipLocations.TextScaled = true
+
+ShipLocations.TextSize = 14
+
+ShipLocations.TextWrapped = true
+
+
+
+CityLocations.Name = "CityLocations"
+
+CityLocations.Parent = MainFrame
+
+CityLocations.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+CityLocations.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+CityLocations.BorderSizePixel = 4
+
+CityLocations.Position = UDim2.new(0.549689412, 0, 0.130718961, 0)
+
+CityLocations.Size = UDim2.new(0, 132, 0, 53)
+
+CityLocations.Font = Enum.Font.SourceSansBold
+
+CityLocations.Text = "Cities"
+
+CityLocations.TextColor3 = Color3.new(0.992157, 0.992157, 0.992157)
+
+CityLocations.TextSize = 35
+
+CityLocations.TextWrapped = true
+
+
+
+VeilFix.Name = "VeilFix"
+
+VeilFix.Parent = MainFrame
+
+VeilFix.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+VeilFix.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+VeilFix.BorderSizePixel = 4
+
+VeilFix.Position = UDim2.new(0.295031071, 0, 0.787581682, 0)
+
+VeilFix.Size = UDim2.new(0, 132, 0, 33)
+
+VeilFix.Font = Enum.Font.SourceSansBold
+
+VeilFix.Text = "Fix Veil"
+
+VeilFix.TextColor3 = Color3.new(0.992157, 0.992157, 0.992157)
+
+VeilFix.TextSize = 35
+
+VeilFix.TextWrapped = true
+
+
+
+DBLocations2.Name = "DBLocations2"
+
+DBLocations2.Parent = DBFS
+
+DBLocations2.Active = true
+
+DBLocations2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+DBLocations2.BorderSizePixel = 0
+
+DBLocations2.Draggable = true
+
+DBLocations2.Position = UDim2.new(0.335381657, 0, 0.314257264, 0)
+
+DBLocations2.Size = UDim2.new(0, 301, 0, 343)
+
+DBLocations2.Visible = false
+
+
+
+bar2.Name = "bar2"
+
+bar2.Parent = DBLocations2
+
+bar2.Active = true
+
+bar2.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar2.BorderSizePixel = 0
+
+bar2.Position = UDim2.new(0, 0, -0.002915452, 0)
+
+bar2.Size = UDim2.new(0, 301, 0, 27)
+
+
+
+bar1.Name = "bar1"
+
+bar1.Parent = DBLocations2
+
+bar1.Active = true
+
+bar1.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+bar1.BorderSizePixel = 0
+
+bar1.Position = UDim2.new(0, 0, 0.0745856389, 0)
+
+bar1.Size = UDim2.new(0, 301, 0, 7)
+
+
+
+LocFrame.Name = "LocFrame"
+
+LocFrame.Parent = DBLocations2
+
+LocFrame.Active = true
+
+LocFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+LocFrame.BorderSizePixel = 0
+
+LocFrame.Position = UDim2.new(0, 0, 0.0758017525, 0)
+
+LocFrame.Size = UDim2.new(0, 301, 0, 318)
+
+
+
+Background.Name = "Background"
+
+Background.Parent = LocFrame
+
+Background.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+Background.BorderSizePixel = 0
+
+Background.Size = UDim2.new(0, 285, 0, 575)
+
+
+
+DB1.Name = "DB1"
+
+DB1.Parent = Background
+
+DB1.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB1.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB1.BorderSizePixel = 4
+
+DB1.Position = UDim2.new(0.0245614033, 0, 0.0147058824, 0)
+
+DB1.Size = UDim2.new(0, 129, 0, 20)
+
+DB1.Font = Enum.Font.SourceSansBold
+
+DB1.Text = "Location 1"
+
+DB1.TextColor3 = Color3.new(1, 1, 1)
+
+DB1.TextScaled = true
+
+DB1.TextSize = 14
+
+DB1.TextWrapped = true
+
+
+
+DB2.Name = "DB2"
+
+DB2.Parent = Background
+
+DB2.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB2.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB2.BorderSizePixel = 4
+
+DB2.Position = UDim2.new(0.526315808, 0, 0.0147058824, 0)
+
+DB2.Size = UDim2.new(0, 129, 0, 20)
+
+DB2.Font = Enum.Font.SourceSansBold
+
+DB2.Text = "Location 2"
+
+DB2.TextColor3 = Color3.new(1, 1, 1)
+
+DB2.TextScaled = true
+
+DB2.TextSize = 14
+
+DB2.TextWrapped = true
+
+
+
+DB3.Name = "DB3"
+
+DB3.Parent = Background
+
+DB3.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB3.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB3.BorderSizePixel = 4
+
+DB3.Position = UDim2.new(0.0245614033, 0, 0.0673374608, 0)
+
+DB3.Size = UDim2.new(0, 129, 0, 20)
+
+DB3.Font = Enum.Font.SourceSansBold
+
+DB3.Text = "Location 3"
+
+DB3.TextColor3 = Color3.new(1, 1, 1)
+
+DB3.TextScaled = true
+
+DB3.TextSize = 14
+
+DB3.TextWrapped = true
+
+
+
+DB4.Name = "DB4"
+
+DB4.Parent = Background
+
+DB4.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB4.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB4.BorderSizePixel = 4
+
+DB4.Position = UDim2.new(0.526315808, 0, 0.0673374608, 0)
+
+DB4.Size = UDim2.new(0, 129, 0, 20)
+
+DB4.Font = Enum.Font.SourceSansBold
+
+DB4.Text = "Location 4"
+
+DB4.TextColor3 = Color3.new(1, 1, 1)
+
+DB4.TextScaled = true
+
+DB4.TextSize = 14
+
+DB4.TextWrapped = true
+
+
+
+DB6.Name = "DB6"
+
+DB6.Parent = Background
+
+DB6.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB6.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB6.BorderSizePixel = 4
+
+DB6.Position = UDim2.new(0.526315808, 0, 0.11996904, 0)
+
+DB6.Size = UDim2.new(0, 129, 0, 20)
+
+DB6.Font = Enum.Font.SourceSansBold
+
+DB6.Text = "Location 6"
+
+DB6.TextColor3 = Color3.new(1, 1, 1)
+
+DB6.TextScaled = true
+
+DB6.TextSize = 14
+
+DB6.TextWrapped = true
+
+
+
+DB8.Name = "DB8"
+
+DB8.Parent = Background
+
+DB8.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB8.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB8.BorderSizePixel = 4
+
+DB8.Position = UDim2.new(0.526315808, 0, 0.174355015, 0)
+
+DB8.Size = UDim2.new(0, 129, 0, 20)
+
+DB8.Font = Enum.Font.SourceSansBold
+
+DB8.Text = "Location 8"
+
+DB8.TextColor3 = Color3.new(1, 1, 1)
+
+DB8.TextScaled = true
+
+DB8.TextSize = 14
+
+DB8.TextWrapped = true
+
+
+
+DB5.Name = "DB5"
+
+DB5.Parent = Background
+
+DB5.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB5.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB5.BorderSizePixel = 4
+
+DB5.Position = UDim2.new(0.0245614033, 0, 0.11996904, 0)
+
+DB5.Size = UDim2.new(0, 129, 0, 20)
+
+DB5.Font = Enum.Font.SourceSansBold
+
+DB5.Text = "Location 5"
+
+DB5.TextColor3 = Color3.new(1, 1, 1)
+
+DB5.TextScaled = true
+
+DB5.TextSize = 14
+
+DB5.TextWrapped = true
+
+
+
+DB7.Name = "DB7"
+
+DB7.Parent = Background
+
+DB7.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB7.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB7.BorderSizePixel = 4
+
+DB7.Position = UDim2.new(0.0245614033, 0, 0.174355, 0)
+
+DB7.Size = UDim2.new(0, 129, 0, 20)
+
+DB7.Font = Enum.Font.SourceSansBold
+
+DB7.Text = "Location 7"
+
+DB7.TextColor3 = Color3.new(1, 1, 1)
+
+DB7.TextScaled = true
+
+DB7.TextSize = 14
+
+DB7.TextWrapped = true
+
+
+
+DB10.Name = "DB10"
+
+DB10.Parent = Background
+
+DB10.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB10.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB10.BorderSizePixel = 4
+
+DB10.Position = UDim2.new(0.526315808, 0, 0.226986602, 0)
+
+DB10.Size = UDim2.new(0, 129, 0, 20)
+
+DB10.Font = Enum.Font.SourceSansBold
+
+DB10.Text = "Location 10"
+
+DB10.TextColor3 = Color3.new(1, 1, 1)
+
+DB10.TextScaled = true
+
+DB10.TextSize = 14
+
+DB10.TextWrapped = true
+
+
+
+DB12.Name = "DB12"
+
+DB12.Parent = Background
+
+DB12.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB12.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB12.BorderSizePixel = 4
+
+DB12.Position = UDim2.new(0.526315808, 0, 0.279618174, 0)
+
+DB12.Size = UDim2.new(0, 129, 0, 20)
+
+DB12.Font = Enum.Font.SourceSansBold
+
+DB12.Text = "Location 12"
+
+DB12.TextColor3 = Color3.new(1, 1, 1)
+
+DB12.TextScaled = true
+
+DB12.TextSize = 14
+
+DB12.TextWrapped = true
+
+
+
+DB14.Name = "DB14"
+
+DB14.Parent = Background
+
+DB14.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB14.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB14.BorderSizePixel = 4
+
+DB14.Position = UDim2.new(0.526315808, 0, 0.332249761, 0)
+
+DB14.Size = UDim2.new(0, 129, 0, 20)
+
+DB14.Font = Enum.Font.SourceSansBold
+
+DB14.Text = "Location 14"
+
+DB14.TextColor3 = Color3.new(1, 1, 1)
+
+DB14.TextScaled = true
+
+DB14.TextSize = 14
+
+DB14.TextWrapped = true
+
+
+
+DB16.Name = "DB16"
+
+DB16.Parent = Background
+
+DB16.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB16.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB16.BorderSizePixel = 4
+
+DB16.Position = UDim2.new(0.526315808, 0, 0.383126944, 0)
+
+DB16.Size = UDim2.new(0, 129, 0, 20)
+
+DB16.Font = Enum.Font.SourceSansBold
+
+DB16.Text = "Location 16"
+
+DB16.TextColor3 = Color3.new(1, 1, 1)
+
+DB16.TextScaled = true
+
+DB16.TextSize = 14
+
+DB16.TextWrapped = true
+
+
+
+DB9.Name = "DB9"
+
+DB9.Parent = Background
+
+DB9.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB9.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB9.BorderSizePixel = 4
+
+DB9.Position = UDim2.new(0.0245614033, 0, 0.226986587, 0)
+
+DB9.Size = UDim2.new(0, 129, 0, 20)
+
+DB9.Font = Enum.Font.SourceSansBold
+
+DB9.Text = "Location 9"
+
+DB9.TextColor3 = Color3.new(1, 1, 1)
+
+DB9.TextScaled = true
+
+DB9.TextSize = 14
+
+DB9.TextWrapped = true
+
+
+
+DB11.Name = "DB11"
+
+DB11.Parent = Background
+
+DB11.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB11.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB11.BorderSizePixel = 4
+
+DB11.Position = UDim2.new(0.0245614033, 0, 0.279618174, 0)
+
+DB11.Size = UDim2.new(0, 129, 0, 20)
+
+DB11.Font = Enum.Font.SourceSansBold
+
+DB11.Text = "Location 11"
+
+DB11.TextColor3 = Color3.new(1, 1, 1)
+
+DB11.TextScaled = true
+
+DB11.TextSize = 14
+
+DB11.TextWrapped = true
+
+
+
+DB13.Name = "DB13"
+
+DB13.Parent = Background
+
+DB13.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB13.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB13.BorderSizePixel = 4
+
+DB13.Position = UDim2.new(0.0245614033, 0, 0.332249761, 0)
+
+DB13.Size = UDim2.new(0, 129, 0, 20)
+
+DB13.Font = Enum.Font.SourceSansBold
+
+DB13.Text = "Location 12"
+
+DB13.TextColor3 = Color3.new(1, 1, 1)
+
+DB13.TextScaled = true
+
+DB13.TextSize = 14
+
+DB13.TextWrapped = true
+
+
+
+DB15.Name = "DB15"
+
+DB15.Parent = Background
+
+DB15.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB15.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB15.BorderSizePixel = 4
+
+DB15.Position = UDim2.new(0.0245614033, 0, 0.383126944, 0)
+
+DB15.Size = UDim2.new(0, 129, 0, 20)
+
+DB15.Font = Enum.Font.SourceSansBold
+
+DB15.Text = "Location 15"
+
+DB15.TextColor3 = Color3.new(1, 1, 1)
+
+DB15.TextScaled = true
+
+DB15.TextSize = 14
+
+DB15.TextWrapped = true
+
+
+
+DB17.Name = "DB17"
+
+DB17.Parent = Background
+
+DB17.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB17.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB17.BorderSizePixel = 4
+
+DB17.Position = UDim2.new(0.0245614033, 0, 0.434004128, 0)
+
+DB17.Size = UDim2.new(0, 129, 0, 20)
+
+DB17.Font = Enum.Font.SourceSansBold
+
+DB17.Text = "Location 17"
+
+DB17.TextColor3 = Color3.new(1, 1, 1)
+
+DB17.TextScaled = true
+
+DB17.TextSize = 14
+
+DB17.TextWrapped = true
+
+
+
+DB18.Name = "DB18"
+
+DB18.Parent = Background
+
+DB18.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB18.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB18.BorderSizePixel = 4
+
+DB18.Position = UDim2.new(0.526315808, 0, 0.434004128, 0)
+
+DB18.Size = UDim2.new(0, 129, 0, 20)
+
+DB18.Font = Enum.Font.SourceSansBold
+
+DB18.Text = "Location 18"
+
+DB18.TextColor3 = Color3.new(1, 1, 1)
+
+DB18.TextScaled = true
+
+DB18.TextSize = 14
+
+DB18.TextWrapped = true
+
+
+
+DB20.Name = "DB20"
+
+DB20.Parent = Background
+
+DB20.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB20.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB20.BorderSizePixel = 4
+
+DB20.Position = UDim2.new(0.526000023, 0, 0.485000014, 0)
+
+DB20.Size = UDim2.new(0, 129, 0, 20)
+
+DB20.Font = Enum.Font.SourceSansBold
+
+DB20.Text = "Location 20"
+
+DB20.TextColor3 = Color3.new(1, 1, 1)
+
+DB20.TextScaled = true
+
+DB20.TextSize = 14
+
+DB20.TextWrapped = true
+
+
+
+DB19.Name = "DB19"
+
+DB19.Parent = Background
+
+DB19.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB19.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB19.BorderSizePixel = 4
+
+DB19.Position = UDim2.new(0.0242456198, 0, 0.485000014, 0)
+
+DB19.Size = UDim2.new(0, 129, 0, 20)
+
+DB19.Font = Enum.Font.SourceSansBold
+
+DB19.Text = "Location 19"
+
+DB19.TextColor3 = Color3.new(1, 1, 1)
+
+DB19.TextScaled = true
+
+DB19.TextSize = 14
+
+DB19.TextWrapped = true
+
+
+
+DB22.Name = "DB22"
+
+DB22.Parent = Background
+
+DB22.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB22.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB22.BorderSizePixel = 4
+
+DB22.Position = UDim2.new(0.526000023, 0, 0.537631571, 0)
+
+DB22.Size = UDim2.new(0, 129, 0, 20)
+
+DB22.Font = Enum.Font.SourceSansBold
+
+DB22.Text = "Location 22"
+
+DB22.TextColor3 = Color3.new(1, 1, 1)
+
+DB22.TextScaled = true
+
+DB22.TextSize = 14
+
+DB22.TextWrapped = true
+
+
+
+DB24.Name = "DB24"
+
+DB24.Parent = Background
+
+DB24.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB24.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB24.BorderSizePixel = 4
+
+DB24.Position = UDim2.new(0.526000023, 0, 0.590263128, 0)
+
+DB24.Size = UDim2.new(0, 129, 0, 20)
+
+DB24.Font = Enum.Font.SourceSansBold
+
+DB24.Text = "Location 24"
+
+DB24.TextColor3 = Color3.new(1, 1, 1)
+
+DB24.TextScaled = true
+
+DB24.TextSize = 14
+
+DB24.TextWrapped = true
+
+
+
+DB26.Name = "DB26"
+
+DB26.Parent = Background
+
+DB26.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB26.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB26.BorderSizePixel = 4
+
+DB26.Position = UDim2.new(0.526000023, 0, 0.642894685, 0)
+
+DB26.Size = UDim2.new(0, 129, 0, 20)
+
+DB26.Font = Enum.Font.SourceSansBold
+
+DB26.Text = "Location 26"
+
+DB26.TextColor3 = Color3.new(1, 1, 1)
+
+DB26.TextScaled = true
+
+DB26.TextSize = 14
+
+DB26.TextWrapped = true
+
+
+
+DB28.Name = "DB28"
+
+DB28.Parent = Background
+
+DB28.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB28.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB28.BorderSizePixel = 4
+
+DB28.Position = UDim2.new(0.526000023, 0, 0.695526242, 0)
+
+DB28.Size = UDim2.new(0, 129, 0, 20)
+
+DB28.Font = Enum.Font.SourceSansBold
+
+DB28.Text = "Location 28"
+
+DB28.TextColor3 = Color3.new(1, 1, 1)
+
+DB28.TextScaled = true
+
+DB28.TextSize = 14
+
+DB28.TextWrapped = true
+
+
+
+DB30.Name = "DB30"
+
+DB30.Parent = Background
+
+DB30.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB30.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB30.BorderSizePixel = 4
+
+DB30.Position = UDim2.new(0.526000023, 0, 0.751666605, 0)
+
+DB30.Size = UDim2.new(0, 129, 0, 20)
+
+DB30.Font = Enum.Font.SourceSansBold
+
+DB30.Text = "Location 30"
+
+DB30.TextColor3 = Color3.new(1, 1, 1)
+
+DB30.TextScaled = true
+
+DB30.TextSize = 14
+
+DB30.TextWrapped = true
+
+
+
+DB21.Name = "DB21"
+
+DB21.Parent = Background
+
+DB21.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB21.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB21.BorderSizePixel = 4
+
+DB21.Position = UDim2.new(0.0242456496, 0, 0.537631571, 0)
+
+DB21.Size = UDim2.new(0, 129, 0, 20)
+
+DB21.Font = Enum.Font.SourceSansBold
+
+DB21.Text = "Location 21"
+
+DB21.TextColor3 = Color3.new(1, 1, 1)
+
+DB21.TextScaled = true
+
+DB21.TextSize = 14
+
+DB21.TextWrapped = true
+
+
+
+DB23.Name = "DB23"
+
+DB23.Parent = Background
+
+DB23.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB23.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB23.BorderSizePixel = 4
+
+DB23.Position = UDim2.new(0.0242456496, 0, 0.589805484, 0)
+
+DB23.Size = UDim2.new(0, 129, 0, 20)
+
+DB23.Font = Enum.Font.SourceSansBold
+
+DB23.Text = "Location 23"
+
+DB23.TextColor3 = Color3.new(1, 1, 1)
+
+DB23.TextScaled = true
+
+DB23.TextSize = 14
+
+DB23.TextWrapped = true
+
+
+
+DB25.Name = "DB25"
+
+DB25.Parent = Background
+
+DB25.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB25.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB25.BorderSizePixel = 4
+
+DB25.Position = UDim2.new(0.0242456496, 0, 0.643718541, 0)
+
+DB25.Size = UDim2.new(0, 129, 0, 20)
+
+DB25.Font = Enum.Font.SourceSansBold
+
+DB25.Text = "Location 25"
+
+DB25.TextColor3 = Color3.new(1, 1, 1)
+
+DB25.TextScaled = true
+
+DB25.TextSize = 14
+
+DB25.TextWrapped = true
+
+
+
+DB27.Name = "DB27"
+
+DB27.Parent = Background
+
+DB27.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB27.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB27.BorderSizePixel = 4
+
+DB27.Position = UDim2.new(0.0242456496, 0, 0.695892453, 0)
+
+DB27.Size = UDim2.new(0, 129, 0, 20)
+
+DB27.Font = Enum.Font.SourceSansBold
+
+DB27.Text = "Location 27"
+
+DB27.TextColor3 = Color3.new(1, 1, 1)
+
+DB27.TextScaled = true
+
+DB27.TextSize = 14
+
+DB27.TextWrapped = true
+
+
+
+DB29.Name = "DB29"
+
+DB29.Parent = Background
+
+DB29.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DB29.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+DB29.BorderSizePixel = 4
+
+DB29.Position = UDim2.new(0.0242456496, 0, 0.751544654, 0)
+
+DB29.Size = UDim2.new(0, 129, 0, 20)
+
+DB29.Font = Enum.Font.SourceSansBold
+
+DB29.Text = "Location 29"
+
+DB29.TextColor3 = Color3.new(1, 1, 1)
+
+DB29.TextScaled = true
+
+DB29.TextSize = 14
+
+DB29.TextWrapped = true
+
+
+
+DBLocText.Name = "DBLocText"
+
+DBLocText.Parent = DBLocations2
+
+DBLocText.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+DBLocText.BorderSizePixel = 0
+
+DBLocText.Position = UDim2.new(0.0232558139, 0, -0.00145772099, 0)
+
+DBLocText.Size = UDim2.new(0, 210, 0, 22)
+
+DBLocText.Font = Enum.Font.SourceSansBold
+
+DBLocText.Text = "Dragonball Locations"
+
+DBLocText.TextColor3 = Color3.new(1, 1, 1)
+
+DBLocText.TextScaled = true
+
+DBLocText.TextSize = 14
+
+DBLocText.TextWrapped = true
+
+DBLocText.TextXAlignment = Enum.TextXAlignment.Left
+
+
+
+TextButton.Parent = DBLocations2
+
+TextButton.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+TextButton.BorderSizePixel = 0
+
+TextButton.Position = UDim2.new(0.903654456, 0, 0, 0)
+
+TextButton.Size = UDim2.new(0, 29, 0, 26)
+
+TextButton.Font = Enum.Font.SourceSansBold
+
+TextButton.Text = "X"
+
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+
+TextButton.TextScaled = true
+
+TextButton.TextSize = 20
+
+TextButton.TextWrapped = true
+
+
+
+CityFrame.Name = "CityFrame"
+
+CityFrame.Parent = DBFS
+
+CityFrame.Active = true
+
+CityFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+CityFrame.BorderSizePixel = 0
+
+CityFrame.Draggable = true
+
+CityFrame.Position = UDim2.new(0.12562187, 0, 0.131826729, 0)
+
+CityFrame.Size = UDim2.new(0, 265, 0, 317)
+
+CityFrame.Visible = false
+
+
+
+bar5.Name = "bar5"
+
+bar5.Parent = CityFrame
+
+bar5.Active = true
+
+bar5.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar5.BorderSizePixel = 0
+
+bar5.Size = UDim2.new(0, 265, 0, 32)
+
+
+
+bar6.Name = "bar6"
+
+bar6.Parent = CityFrame
+
+bar6.Active = true
+
+bar6.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+bar6.BorderSizePixel = 0
+
+bar6.Position = UDim2.new(0, 0, 0.100946374, 0)
+
+bar6.Size = UDim2.new(0, 265, 0, 4)
+
+
+
+CityLoc.Name = "CityLoc"
+
+CityLoc.Parent = CityFrame
+
+CityLoc.Active = true
+
+CityLoc.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+CityLoc.BorderSizePixel = 0
+
+CityLoc.Position = UDim2.new(0.0264150947, 0, 0, 0)
+
+CityLoc.Size = UDim2.new(0, 157, 0, 32)
+
+CityLoc.Font = Enum.Font.SourceSansBold
+
+CityLoc.Text = "Cities"
+
+CityLoc.TextColor3 = Color3.new(1, 1, 1)
+
+CityLoc.TextScaled = true
+
+CityLoc.TextSize = 14
+
+CityLoc.TextWrapped = true
+
+CityLoc.TextXAlignment = Enum.TextXAlignment.Left
+
+
+
+Xbut.Name = "Xbut"
+
+Xbut.Parent = CityFrame
+
+Xbut.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Xbut.BorderSizePixel = 0
+
+Xbut.Position = UDim2.new(0.867924511, 0, 0.00946372282, 0)
+
+Xbut.Size = UDim2.new(0, 35, 0, 29)
+
+Xbut.Font = Enum.Font.Cartoon
+
+Xbut.Text = "X"
+
+Xbut.TextColor3 = Color3.new(1, 1, 1)
+
+Xbut.TextScaled = true
+
+Xbut.TextSize = 14
+
+Xbut.TextWrapped = true
+
+
+
+WestCity.Name = "WestCity"
+
+WestCity.Parent = CityFrame
+
+WestCity.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+WestCity.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+WestCity.BorderSizePixel = 4
+
+WestCity.Position = UDim2.new(0.0264150947, 0, 0.130914822, 0)
+
+WestCity.Size = UDim2.new(0, 117, 0, 50)
+
+WestCity.Font = Enum.Font.SourceSansBold
+
+WestCity.Text = "West City"
+
+WestCity.TextColor3 = Color3.new(1, 1, 1)
+
+WestCity.TextScaled = true
+
+WestCity.TextSize = 14
+
+WestCity.TextWrapped = true
+
+
+
+EastCity.Name = "East City"
+
+EastCity.Parent = CityFrame
+
+EastCity.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+EastCity.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+EastCity.BorderSizePixel = 4
+
+EastCity.Position = UDim2.new(0.524528265, 0, 0.130914822, 0)
+
+EastCity.Size = UDim2.new(0, 117, 0, 50)
+
+EastCity.Font = Enum.Font.SourceSansBold
+
+EastCity.Text = "East City"
+
+EastCity.TextColor3 = Color3.new(1, 1, 1)
+
+EastCity.TextScaled = true
+
+EastCity.TextSize = 14
+
+EastCity.TextWrapped = true
+
+
+
+SouthCity.Name = "South City"
+
+SouthCity.Parent = CityFrame
+
+SouthCity.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+SouthCity.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+SouthCity.BorderSizePixel = 4
+
+SouthCity.Position = UDim2.new(0.524528265, 0, 0.354889572, 0)
+
+SouthCity.Size = UDim2.new(0, 117, 0, 50)
+
+SouthCity.Font = Enum.Font.SourceSansBold
+
+SouthCity.Text = "South City"
+
+SouthCity.TextColor3 = Color3.new(1, 1, 1)
+
+SouthCity.TextScaled = true
+
+SouthCity.TextSize = 14
+
+SouthCity.TextWrapped = true
+
+
+
+SatanCity.Name = "Satan City"
+
+SatanCity.Parent = CityFrame
+
+SatanCity.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+SatanCity.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+SatanCity.BorderSizePixel = 4
+
+SatanCity.Position = UDim2.new(0.02641505, 0, 0.354889572, 0)
+
+SatanCity.Size = UDim2.new(0, 117, 0, 50)
+
+SatanCity.Font = Enum.Font.SourceSansBold
+
+SatanCity.Text = "Satan City"
+
+SatanCity.TextColor3 = Color3.new(1, 1, 1)
+
+SatanCity.TextScaled = true
+
+SatanCity.TextSize = 14
+
+SatanCity.TextWrapped = true
+
+
+
+GingerTown.Name = "Ginger Town"
+
+GingerTown.Parent = CityFrame
+
+GingerTown.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+GingerTown.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+GingerTown.BorderSizePixel = 4
+
+GingerTown.Position = UDim2.new(0.279245257, 0, 0.556782305, 0)
+
+GingerTown.Size = UDim2.new(0, 117, 0, 50)
+
+GingerTown.Font = Enum.Font.SourceSansBold
+
+GingerTown.Text = "Ginger Town"
+
+GingerTown.TextColor3 = Color3.new(1, 1, 1)
+
+GingerTown.TextScaled = true
+
+GingerTown.TextSize = 14
+
+GingerTown.TextWrapped = true
+
+
+
+CentralCity.Name = "Central City"
+
+CentralCity.Parent = CityFrame
+
+CentralCity.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+CentralCity.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+CentralCity.BorderSizePixel = 4
+
+CentralCity.Position = UDim2.new(0.203773558, 0, 0.779179811, 0)
+
+CentralCity.Size = UDim2.new(0, 156, 0, 50)
+
+CentralCity.Font = Enum.Font.SourceSansBold
+
+CentralCity.Text = "Central City"
+
+CentralCity.TextColor3 = Color3.new(1, 1, 1)
+
+CentralCity.TextScaled = true
+
+CentralCity.TextSize = 14
+
+CentralCity.TextWrapped = true
+
+
+
+ShipFrame.Name = "ShipFrame"
+
+ShipFrame.Parent = DBFS
+
+ShipFrame.Active = true
+
+ShipFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+ShipFrame.BorderSizePixel = 0
+
+ShipFrame.Draggable = true
+
+ShipFrame.Position = UDim2.new(0.49626869, 0, 0.331450105, 0)
+
+ShipFrame.Size = UDim2.new(0, 245, 0, 172)
+
+ShipFrame.Visible = false
+
+
+
+bar7.Name = "bar7"
+
+bar7.Parent = ShipFrame
+
+bar7.Active = true
+
+bar7.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar7.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+bar7.BorderSizePixel = 0
+
+bar7.Position = UDim2.new(0, 0, -0.00581395347, 0)
+
+bar7.Size = UDim2.new(0, 245, 0, 23)
+
+
+
+bar8.Name = "bar8"
+
+bar8.Parent = ShipFrame
+
+bar8.Active = true
+
+bar8.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+bar8.BorderSizePixel = 0
+
+bar8.Position = UDim2.new(0, 0, 0.127906978, 0)
+
+bar8.Size = UDim2.new(0, 245, 0, 4)
+
+
+
+Namek.Name = "Namek"
+
+Namek.Parent = ShipFrame
+
+Namek.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Namek.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Namek.BorderSizePixel = 4
+
+Namek.Position = UDim2.new(0.0326530598, 0, 0.22674419, 0)
+
+Namek.Size = UDim2.new(0, 104, 0, 43)
+
+Namek.Font = Enum.Font.SourceSansBold
+
+Namek.Text = "Namek"
+
+Namek.TextColor3 = Color3.new(1, 1, 1)
+
+Namek.TextScaled = true
+
+Namek.TextSize = 14
+
+Namek.TextWrapped = true
+
+
+
+Space.Name = "Space"
+
+Space.Parent = ShipFrame
+
+Space.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Space.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Space.BorderSizePixel = 4
+
+Space.Position = UDim2.new(0.538775444, 0, 0.22674419, 0)
+
+Space.Size = UDim2.new(0, 104, 0, 43)
+
+Space.Font = Enum.Font.SourceSansBold
+
+Space.Text = "Space"
+
+Space.TextColor3 = Color3.new(1, 1, 1)
+
+Space.TextScaled = true
+
+Space.TextSize = 14
+
+Space.TextWrapped = true
+
+
+
+Futre.Name = "Futre"
+
+Futre.Parent = ShipFrame
+
+Futre.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Futre.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Futre.BorderSizePixel = 4
+
+Futre.Position = UDim2.new(0.287755042, 0, 0.593023241, 0)
+
+Futre.Size = UDim2.new(0, 104, 0, 43)
+
+Futre.Font = Enum.Font.SourceSansBold
+
+Futre.Text = "Future"
+
+Futre.TextColor3 = Color3.new(1, 1, 1)
+
+Futre.TextScaled = true
+
+Futre.TextSize = 14
+
+Futre.TextWrapped = true
+
+
+
+ShipLoc.Name = "ShipLoc"
+
+ShipLoc.Parent = ShipFrame
+
+ShipLoc.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+ShipLoc.BorderSizePixel = 0
+
+ShipLoc.Position = UDim2.new(0.0326530598, 0, -0.00581395347, 0)
+
+ShipLoc.Size = UDim2.new(0, 130, 0, 23)
+
+ShipLoc.Font = Enum.Font.SourceSansBold
+
+ShipLoc.Text = "Ship Locations"
+
+ShipLoc.TextColor3 = Color3.new(1, 1, 1)
+
+ShipLoc.TextScaled = true
+
+ShipLoc.TextSize = 14
+
+ShipLoc.TextWrapped = true
+
+
+
+CloseBut.Name = "CloseBut"
+
+CloseBut.Parent = ShipFrame
+
+CloseBut.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+CloseBut.BorderSizePixel = 0
+
+CloseBut.Position = UDim2.new(0.853061199, 0, -0.00581395347, 0)
+
+CloseBut.Size = UDim2.new(0, 36, 0, 23)
+
+CloseBut.Font = Enum.Font.Cartoon
+
+CloseBut.Text = "X"
+
+CloseBut.TextColor3 = Color3.new(1, 1, 1)
+
+CloseBut.TextScaled = true
+
+CloseBut.TextSize = 14
+
+CloseBut.TextWrapped = true
+
+
+
+MiscFrame.Name = "MiscFrame"
+
+MiscFrame.Parent = DBFS
+
+MiscFrame.Active = true
+
+MiscFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+MiscFrame.BorderSizePixel = 0
+
+MiscFrame.Draggable = true
+
+MiscFrame.Position = UDim2.new(0.120646767, 0, 0.131826743, 0)
+
+MiscFrame.Size = UDim2.new(0, 258, 0, 281)
+
+MiscFrame.Visible = false
+
+
+
+bar9.Name = "bar9"
+
+bar9.Parent = MiscFrame
+
+bar9.Active = true
+
+bar9.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar9.BorderSizePixel = 0
+
+bar9.Size = UDim2.new(0, 258, 0, 27)
+
+
+
+bar10.Name = "bar10"
+
+bar10.Parent = MiscFrame
+
+bar10.Active = true
+
+bar10.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+bar10.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+bar10.BorderSizePixel = 0
+
+bar10.Position = UDim2.new(-0.000896677375, 0, 0.0942857713, 0)
+
+bar10.Size = UDim2.new(0, 258, 0, 4)
+
+
+
+MiscLoc.Name = "MiscLoc"
+
+MiscLoc.Parent = MiscFrame
+
+MiscLoc.Active = true
+
+MiscLoc.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+MiscLoc.BorderSizePixel = 0
+
+MiscLoc.Position = UDim2.new(0.0217391308, 0, 0.00326797389, 0)
+
+MiscLoc.Size = UDim2.new(0, 181, 0, 26)
+
+MiscLoc.Font = Enum.Font.SourceSansBold
+
+MiscLoc.Text = "Misc Locations"
+
+MiscLoc.TextColor3 = Color3.new(1, 1, 1)
+
+MiscLoc.TextScaled = true
+
+MiscLoc.TextSize = 20
+
+MiscLoc.TextWrapped = true
+
+MiscLoc.TextXAlignment = Enum.TextXAlignment.Left
+
+
+
+Closebutton1.Name = "Closebutton1"
+
+Closebutton1.Parent = MiscFrame
+
+Closebutton1.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Closebutton1.BorderSizePixel = 0
+
+Closebutton1.Position = UDim2.new(0.883576453, 0, 0.00346020772, 0)
+
+Closebutton1.Size = UDim2.new(0, 30, 0, 27)
+
+Closebutton1.Font = Enum.Font.Cartoon
+
+Closebutton1.Text = "X"
+
+Closebutton1.TextColor3 = Color3.new(1, 1, 1)
+
+Closebutton1.TextScaled = true
+
+Closebutton1.TextSize = 14
+
+Closebutton1.TextWrapped = true
+
+
+
+Korin.Name = "Korin"
+
+Korin.Parent = MiscFrame
+
+Korin.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Korin.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Korin.BorderSizePixel = 4
+
+Korin.Position = UDim2.new(0.0348837227, 0, 0.138408303, 0)
+
+Korin.Size = UDim2.new(0, 116, 0, 43)
+
+Korin.Font = Enum.Font.SourceSansBold
+
+Korin.Text = "Korin's Tower"
+
+Korin.TextColor3 = Color3.new(1, 1, 1)
+
+Korin.TextScaled = true
+
+Korin.TextSize = 14
+
+Korin.TextWrapped = true
+
+
+
+Lookout.Name = "Lookout"
+
+Lookout.Parent = MiscFrame
+
+Lookout.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Lookout.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Lookout.BorderSizePixel = 4
+
+Lookout.Position = UDim2.new(0.523255825, 0, 0.138408303, 0)
+
+Lookout.Size = UDim2.new(0, 116, 0, 43)
+
+Lookout.Font = Enum.Font.SourceSansBold
+
+Lookout.Text = "The Lookout"
+
+Lookout.TextColor3 = Color3.new(1, 1, 1)
+
+Lookout.TextScaled = true
+
+Lookout.TextSize = 14
+
+Lookout.TextWrapped = true
+
+
+
+Kame.Name = "Kame"
+
+Kame.Parent = MiscFrame
+
+Kame.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Kame.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Kame.BorderSizePixel = 4
+
+Kame.Position = UDim2.new(0.523255825, 0, 0.368062645, 0)
+
+Kame.Size = UDim2.new(0, 116, 0, 43)
+
+Kame.Font = Enum.Font.SourceSansBold
+
+Kame.Text = "Kame House"
+
+Kame.TextColor3 = Color3.new(1, 1, 1)
+
+Kame.TextScaled = true
+
+Kame.TextSize = 14
+
+Kame.TextWrapped = true
+
+
+
+Goku.Name = "Goku"
+
+Goku.Parent = MiscFrame
+
+Goku.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Goku.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Goku.BorderSizePixel = 4
+
+Goku.Position = UDim2.new(0.0348837376, 0, 0.368062645, 0)
+
+Goku.Size = UDim2.new(0, 116, 0, 43)
+
+Goku.Font = Enum.Font.SourceSansBold
+
+Goku.Text = "Goku's House"
+
+Goku.TextColor3 = Color3.new(1, 1, 1)
+
+Goku.TextScaled = true
+
+Goku.TextSize = 14
+
+Goku.TextWrapped = true
+
+
+
+Capsule.Name = "Capsule"
+
+Capsule.Parent = MiscFrame
+
+Capsule.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+
+Capsule.BorderColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+
+Capsule.BorderSizePixel = 4
+
+Capsule.Position = UDim2.new(0.218992263, 0, 0.587188601, 0)
+
+Capsule.Size = UDim2.new(0, 145, 0, 43)
+
+Capsule.Font = Enum.Font.SourceSansBold
+
+Capsule.Text = "Capsule Corp"
+
+Capsule.TextColor3 = Color3.new(1, 1, 1)
+
+Capsule.TextScaled = true
+
+Capsule.TextSize = 14
+
+Capsule.TextWrapped = true
+
+
+
+--Veil Fix
+
+VeilFix.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+end)
+
+
+
+--Close Functions
+
+
+
+CloseButton.MouseButton1Click:connect(function()
+
+    game.CoreGui.DBFS.MainFrame.Visible = false
+
+end)
+
+
+
+TextButton.MouseButton1Click:connect(function()
+
+    game.CoreGui.DBFS.DBLocations2.Visible = false
+
+end)
+
+
+
+Xbut.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.CityFrame.Visible = false
+
+end)
+
+
+
+CloseBut.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.ShipFrame.Visible = false
+
+end)
+
+
+
+Closebutton1.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.MiscFrame.Visible = false
+
+end)
+
+
+
+--Open Functions
+
+OPEN.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.MainFrame.Visible = true
+
+wait(0.1)
+
+    game.CoreGui.DBFS.WelcomeFrame.Visible = false
+
+end)
+
+
+
+DBLocations.MouseButton1Click:connect(function()
+
+    game.CoreGui.DBFS.DBLocations2.Visible = true
+
+end)
+
+
+
+CityLocations.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.CityFrame.Visible = true
+
+end)
+
+
+
+ShipLocations.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.ShipFrame.Visible = true
+
+end)
+
+
+
+MiscLocations.MouseButton1Click:connect(function()
+
+	game.CoreGui.DBFS.MiscFrame.Visible = true
+
+end)
+
+
+
+--Script Functions
+
+
+
+DB1.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-6556.34424, 60.1363754, -854.043396))
+
+end)
+
+
+
+DB2.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1495.04956, -22.9246483, 601.3479))
+
+end)
+
+
+
+DB3.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2331.55298, 27.1572895, -2123.86572))
+
+end)
+
+
+
+DB4.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3184.27783, 41.3880043, 623.789795))
+
+end)
+
+
+
+DB5.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2587.06812, 21.0628529, -4127.20459))
+
+end)
+
+
+
+DB6.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-477.929626, 389.398285, -7238.94092))
+
+end)
+
+
+
+DB7.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-4428.46875, 18.5274315, -3126.84277))
+
+end)
+
+
+
+DB8.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(768.047485, 21.1128502, -2355.19165))
+
+end)
+
+
+
+DB9.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(457.984253, 282.424072, 506.205688))
+
+end)
+
+
+
+DB10.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(2643.48047, 4007.99658, -2273.48022))
+
+end)
+
+
+
+DB11.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2074.33813, 33.9032097, -2085.66821))
+
+end)
+
+
+
+DB12.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1123.45776, -229246483, -2031.03894))
+
+end)
+
+
+
+DB13.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-667.833435, 22.6658115, -3406.04028))
+
+end)
+
+
+
+DB14.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3455.88843, 23.591814, -7706.979))
+
+end)
+
+
+
+DB15.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1552.49622, 40.3661537, -3372.01318))
+
+end)
+
+
+
+DB16.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(891.342957, 133.485794, 861.494141))
+
+end)
+
+
+
+DB17.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-6221.97266, 21.0628529, -4201.08594))
+
+end)
+
+
+
+DB18.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5628.59277, 41.7720947, 206.396606))
+
+end)
+
+
+
+DB19.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5146.2334, -23.4094143, -185.846024))
+
+end)
+
+
+
+DB20.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-4056.19995, 36.1602745, 1575.13562))
+
+end)
+
+
+
+DB21.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3579.63599, 30.1973209, 1697.7334))
+
+end)
+
+
+
+DB22.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(105.88678, 173.891296, 408.767792))
+
+end)
+
+
+
+DB23.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(61.5796089, 251.681992, 1191.1394))
+
+end)
+
+
+
+DB24.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3080.59668, 60.2102852, -917677368))
+
+end)
+
+
+
+DB25.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3627.52734, 22.1840153, -1796.11511))
+
+end)
+
+
+
+DB26.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1927.53015, 309.072052, -3873.96582))
+
+end)
+
+
+
+DB27.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-2042.13916, 23.0597382, -6796.07275))
+
+end)
+
+
+
+DB28.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-708.184509, 25.6628914, -6526.2790))
+
+end)
+
+
+
+DB29.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(418.316925, 21.0628529, -1663.07666))
+
+end)
+
+
+
+DB30.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1229.698, 23.0632572, -2695.86792))
+
+end)
+
+
+
+SatanCity.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5563, 140.06, -2743))
+
+end)
+
+
+
+SouthCity.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-542, 25.06, -6403))
+
+end)
+
+
+
+GingerTown.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(992.1, 22.06, -2612.82))
+
+end)
+
+
+
+CentralCity.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-3269, 22.05, -1421))
+
+end)
+
+
+
+WestCity.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-586, 22.07, -2886))
+
+end)
+
+
+
+EastCity.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-6380, 21.03, -1218))
+
+end)
+
+	
+
+Namek.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1442.82, 93.7, 3245.07))
+
+end)
+
+
+
+Space.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1196.14, 22.66, -2929.47))
+
+end)
+
+
+
+Futre.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(788.51, 23.16, -1804.29))
+
+end)
+
+
+
+Korin.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(2046.67, 1494.63, -2274.52))
+
+end)
+
+
+
+Lookout.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(2412.31, 3944.88, -2268.7))
+
+end)
+
+
+
+Kame.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5859.6, 20.39, -6002.06))
+
+end)
+
+
+
+Goku.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-5998.14, 21.06, -4237.31))
+
+end)
+
+
+
+Capsule.MouseButton1Click:connect(function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-1263.09, 22.66, -2946.81))
+
+end)

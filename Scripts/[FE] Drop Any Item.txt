@@ -1,0 +1,3 @@
+for _,v in pairs(game:GetService"Players".LocalPlayer:FindFirstChildOfClass"Backpack":GetChildren'') do
+   pcall(function() v.CanBeDropped = true end)
+end
